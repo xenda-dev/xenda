@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FinanzIA — Controla tus finanzas con inteligencia artificial</title>
   <meta name="description" content="FinanzIA controla tus cuentas, gastos y metas con IA. Simple, rápido y diseñado para personas reales. Gratis para empezar." />
+  <link rel="icon" type="image/png" href="/finanzia/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
@@ -21,6 +22,16 @@
       background-image: linear-gradient(135deg, #00C4A3, #0EA5E9);
       color: #fff;
     }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-14px); }
+    }
+    @keyframes shadow-pulse {
+      0%, 100% { transform: translateX(-50%) scaleX(1);    opacity: .32; }
+      50%       { transform: translateX(-50%) scaleX(.82); opacity: .13; }
+    }
+    .phone-float  { animation: float         3s ease-in-out infinite; }
+    .phone-shadow { animation: shadow-pulse  3s ease-in-out infinite; }
   </style>
 </head>
 <body class="min-h-screen bg-gradient-to-b from-slate-50 to-white font-sans">
@@ -101,70 +112,87 @@
         </div>
       </div>
 
-      <!-- Right column — dashboard mockup -->
-      <div class="relative">
-        <div class="absolute inset-0 bg-gradient-to-r from-[#00C4A3]/20 to-[#0EA5E9]/20 rounded-3xl blur-3xl"></div>
-        <div class="relative bg-white rounded-3xl shadow-2xl p-6 border border-slate-100">
-
-          <div class="flex justify-between items-center mb-6">
-            <div>
-              <p class="text-xs text-slate-400 font-semibold tracking-wider">BALANCE TOTAL</p>
-              <p class="text-3xl font-bold text-slate-900">$4.820.500</p>
-              <p class="text-xs text-slate-400 mt-0.5">COP · 3 cuentas</p>
-            </div>
-            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#00C4A3] to-[#0EA5E9] flex items-center justify-center text-white text-sm font-bold shadow-lg">F</div>
+      <!-- Right column — Phone mockup -->
+      <div class="relative flex justify-center items-center py-6">
+        <!-- Ambient glow -->
+        <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,196,163,.22) 0%,rgba(14,165,233,.12) 50%,transparent 75%);filter:blur(32px);pointer-events:none;"></div>
+        <!-- Shadow synced with float -->
+        <div class="phone-shadow" style="position:absolute;bottom:4px;left:50%;width:180px;height:18px;background:rgba(0,0,0,.32);border-radius:50%;filter:blur(14px);"></div>
+        <!-- Phone frame -->
+        <div class="phone-float" style="position:relative;width:260px;border-radius:46px;background:linear-gradient(180deg,#2a2d3a,#1a1d2a);padding:10px;box-shadow:0 0 0 1.5px rgba(255,255,255,.08),0 40px 80px rgba(0,0,0,.55),0 0 40px rgba(0,196,163,.1);">
+          <!-- Notch -->
+          <div style="display:flex;justify-content:center;padding:8px 0 4px;">
+            <div style="width:88px;height:20px;background:#0f1117;border-radius:0 0 12px 12px;"></div>
           </div>
-
-          <div class="grid grid-cols-2 gap-3 mb-6">
-            <div class="bg-emerald-50 rounded-xl p-3">
-              <p class="text-xs text-emerald-600 font-semibold mb-1">↑ INGRESOS</p>
-              <p class="text-lg font-bold text-emerald-700">$3.200.000</p>
-              <p class="text-xs text-slate-400">Este mes</p>
-            </div>
-            <div class="bg-red-50 rounded-xl p-3">
-              <p class="text-xs text-red-500 font-semibold mb-1">↓ GASTOS</p>
-              <p class="text-lg font-bold text-red-600">$1.847.500</p>
-              <p class="text-xs text-slate-400">Este mes</p>
-            </div>
-          </div>
-
-          <div>
-            <p class="text-xs font-semibold text-slate-400 tracking-wider mb-3">ÚLTIMOS MOVIMIENTOS</p>
-            <div class="flex items-center justify-between py-2.5 border-b border-slate-50">
-              <div class="flex items-center gap-3">
-                <span class="text-xl">🛒</span>
-                <div>
-                  <p class="text-sm font-medium text-slate-700">Supermercado</p>
-                  <p class="text-xs text-slate-400">Alimentación</p>
+          <!-- Screen -->
+          <div style="background:#131826;border-radius:36px;overflow:hidden;">
+            <!-- Header -->
+            <div style="background:linear-gradient(135deg,#00C4A3,#0EA5E9);padding:16px 14px 18px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+                <span style="color:#fff;font-weight:800;font-size:15px;letter-spacing:-.02em;font-family:Outfit,sans-serif;">Finanz<span style="opacity:.8;">IA</span></span>
+                <div style="width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;">
+                  <div style="width:14px;height:14px;border-radius:50%;background:rgba(255,255,255,.6);"></div>
                 </div>
               </div>
-              <span class="text-sm font-bold text-red-500">-$85.000</span>
+              <div style="color:rgba(255,255,255,.65);font-size:9px;font-weight:700;letter-spacing:.12em;margin-bottom:3px;">BALANCE TOTAL</div>
+              <div style="color:#fff;font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-bottom:3px;">$4.820.500</div>
+              <div style="color:rgba(255,255,255,.55);font-size:9px;">COP · 3 cuentas</div>
             </div>
-            <div class="flex items-center justify-between py-2.5 border-b border-slate-50">
-              <div class="flex items-center gap-3">
-                <span class="text-xl">💼</span>
-                <div>
-                  <p class="text-sm font-medium text-slate-700">Salario</p>
-                  <p class="text-xs text-slate-400">Ingreso</p>
-                </div>
+            <!-- Stats -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 10px 0;">
+              <div style="background:#1b2336;border-radius:12px;padding:10px;">
+                <div style="color:#4ade80;font-size:8px;font-weight:700;letter-spacing:.1em;margin-bottom:3px;">↑ INGRESOS</div>
+                <div style="color:#fff;font-size:13px;font-weight:700;">$3.200.000</div>
+                <div style="color:rgba(255,255,255,.3);font-size:8px;">Este mes</div>
               </div>
-              <span class="text-sm font-bold text-emerald-600">+$3.200.000</span>
+              <div style="background:#1b2336;border-radius:12px;padding:10px;">
+                <div style="color:#f87171;font-size:8px;font-weight:700;letter-spacing:.1em;margin-bottom:3px;">↓ GASTOS</div>
+                <div style="color:#fff;font-size:13px;font-weight:700;">$1.847.500</div>
+                <div style="color:rgba(255,255,255,.3);font-size:8px;">Este mes</div>
+              </div>
             </div>
-            <div class="flex items-center justify-between py-2.5">
-              <div class="flex items-center gap-3">
-                <span class="text-xl">🚌</span>
-                <div>
-                  <p class="text-sm font-medium text-slate-700">TransMilenio</p>
-                  <p class="text-xs text-slate-400">Transporte</p>
+            <!-- Transactions -->
+            <div style="padding:10px 10px 8px;">
+              <div style="color:rgba(255,255,255,.3);font-size:8px;font-weight:700;letter-spacing:.14em;margin-bottom:7px;">MOVIMIENTOS</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05);">
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <div style="width:30px;height:30px;background:#1b2336;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;">🛒</div>
+                  <div>
+                    <div style="color:#fff;font-size:10px;font-weight:600;">Supermercado</div>
+                    <div style="color:rgba(255,255,255,.3);font-size:8px;">Alimentación</div>
+                  </div>
                 </div>
+                <span style="color:#f87171;font-size:10px;font-weight:700;">-$85.000</span>
               </div>
-              <span class="text-sm font-bold text-red-500">-$5.200</span>
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05);">
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <div style="width:30px;height:30px;background:#1b2336;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;">💼</div>
+                  <div>
+                    <div style="color:#fff;font-size:10px;font-weight:600;">Salario</div>
+                    <div style="color:rgba(255,255,255,.3);font-size:8px;">Ingreso</div>
+                  </div>
+                </div>
+                <span style="color:#4ade80;font-size:10px;font-weight:700;">+$3.200.000</span>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;">
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <div style="width:30px;height:30px;background:#1b2336;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;">🚌</div>
+                  <div>
+                    <div style="color:#fff;font-size:10px;font-weight:600;">TransMilenio</div>
+                    <div style="color:rgba(255,255,255,.3);font-size:8px;">Transporte</div>
+                  </div>
+                </div>
+                <span style="color:#f87171;font-size:10px;font-weight:700;">-$5.200</span>
+              </div>
+            </div>
+            <!-- Screen home indicator -->
+            <div style="text-align:center;padding:4px 0 8px;">
+              <div style="display:inline-block;width:72px;height:3px;background:rgba(255,255,255,.12);border-radius:2px;"></div>
             </div>
           </div>
-
-          <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-center gap-2">
-            <div class="w-2 h-2 rounded-full bg-[#00C4A3] animate-pulse"></div>
-            <span class="text-xs text-slate-400 font-medium">Datos en tiempo real</span>
+          <!-- Home bar -->
+          <div style="text-align:center;padding:7px 0 4px;">
+            <div style="display:inline-block;width:80px;height:4px;background:rgba(255,255,255,.2);border-radius:2px;"></div>
           </div>
         </div>
       </div>
