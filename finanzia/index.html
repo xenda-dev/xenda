@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FinanzIA — Controla tus finanzas con inteligencia artificial</title>
+  <meta name="description" content="FinanzIA controla tus cuentas, gastos y metas con IA. Simple, rápido y diseñado para personas reales. Gratis para empezar." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    .gradient-text {
+      background: linear-gradient(135deg, #00C4A3, #0EA5E9);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .btn-plan-outline:hover {
+      background-image: linear-gradient(135deg, #00C4A3, #0EA5E9);
+      color: #fff;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-slate-50 to-white font-sans">
+
+<!-- ═══ NAV ═══════════════════════════════════════════════════════ -->
+<nav id="main-nav" class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-200 transition-shadow duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <div class="flex items-center">
+        <span style="font-family:'Outfit',sans-serif;font-weight:800;font-size:22px;letter-spacing:-0.03em;color:#0A0F1E;">
+          Finanz<span style="color:#00C4A3;">IA</span>
+        </span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#features" class="text-gray-800 hover:text-[#00C4A3] transition text-sm font-semibold">Características</a>
+        <a href="#pricing" class="text-gray-800 hover:text-[#00C4A3] transition text-sm font-semibold">Precios</a>
+        <a href="#faq" class="text-gray-800 hover:text-[#00C4A3] transition text-sm font-semibold">FAQ</a>
+      </div>
+      <button onclick="toggleMenu()" class="md:hidden text-gray-800 p-2">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200">
+    <div class="px-4 py-4 space-y-3">
+      <a href="#features" onclick="toggleMenu()" class="block text-gray-800 hover:text-[#00C4A3] text-sm font-semibold">Características</a>
+      <a href="#pricing" onclick="toggleMenu()" class="block text-gray-800 hover:text-[#00C4A3] text-sm font-semibold">Precios</a>
+      <a href="#faq" onclick="toggleMenu()" class="block text-gray-800 hover:text-[#00C4A3] text-sm font-semibold">FAQ</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ══════════════════════════════════════════════════════ -->
+<section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+
+      <!-- Left column -->
+      <div class="text-center md:text-left">
+        <div class="inline-flex items-center space-x-2 bg-gradient-to-r from-[#00C4A3]/10 to-[#0EA5E9]/10 text-[#00C4A3] px-4 py-2 rounded-full mb-6 border border-[#00C4A3]/20">
+          <i data-lucide="zap" class="w-4 h-4"></i>
+          <span class="text-sm font-medium">App de finanzas personales · Colombia</span>
+        </div>
+
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight">
+          Deja de perder dinero
+          <span class="gradient-text"> sin saber por qué</span>
+        </h1>
+
+        <p class="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
+          FinanzIA controla tus cuentas, gastos y metas con inteligencia artificial.
+          Simple, rápido y diseñado para personas reales.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-8">
+          <button onclick="scrollToPlans()" class="bg-gradient-to-r from-[#00C4A3] to-[#0EA5E9] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-2xl hover:scale-105 transition shadow-lg flex items-center justify-center space-x-2">
+            <span>Empezar gratis</span>
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </button>
+          <button onclick="scrollToHowItWorks()" class="border-2 border-[#00C4A3] text-[#00C4A3] px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#00C4A3] hover:text-white transition">
+            Ver cómo funciona
+          </button>
+        </div>
+
+        <div class="flex items-center justify-center md:justify-start text-sm text-slate-500 flex-wrap gap-4">
+          <div class="flex items-center space-x-2">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-[#00C4A3]"></i>
+            <span>Plan gratuito disponible</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-[#00C4A3]"></i>
+            <span>Sin tarjeta de crédito</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-[#00C4A3]"></i>
+            <span>Disponible en tu celular</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column — dashboard mockup -->
+      <div class="relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#00C4A3]/20 to-[#0EA5E9]/20 rounded-3xl blur-3xl"></div>
+        <div class="relative bg-white rounded-3xl shadow-2xl p-6 border border-slate-100">
+
+          <div class="flex justify-between items-center mb-6">
+            <div>
+              <p class="text-xs text-slate-400 font-semibold tracking-wider">BALANCE TOTAL</p>
+              <p class="text-3xl font-bold text-slate-900">$4.820.500</p>
+              <p class="text-xs text-slate-400 mt-0.5">COP · 3 cuentas</p>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#00C4A3] to-[#0EA5E9] flex items-center justify-center text-white text-sm font-bold shadow-lg">F</div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 mb-6">
+            <div class="bg-emerald-50 rounded-xl p-3">
+              <p class="text-xs text-emerald-600 font-semibold mb-1">↑ INGRESOS</p>
+              <p class="text-lg font-bold text-emerald-700">$3.200.000</p>
+              <p class="text-xs text-slate-400">Este mes</p>
+            </div>
+            <div class="bg-red-50 rounded-xl p-3">
+              <p class="text-xs text-red-500 font-semibold mb-1">↓ GASTOS</p>
+              <p class="text-lg font-bold text-red-600">$1.847.500</p>
+              <p class="text-xs text-slate-400">Este mes</p>
+            </div>
+          </div>
+
+          <div>
+            <p class="text-xs font-semibold text-slate-400 tracking-wider mb-3">ÚLTIMOS MOVIMIENTOS</p>
+            <div class="flex items-center justify-between py-2.5 border-b border-slate-50">
+              <div class="flex items-center gap-3">
+                <span class="text-xl">🛒</span>
+                <div>
+                  <p class="text-sm font-medium text-slate-700">Supermercado</p>
+                  <p class="text-xs text-slate-400">Alimentación</p>
+                </div>
+              </div>
+              <span class="text-sm font-bold text-red-500">-$85.000</span>
+            </div>
+            <div class="flex items-center justify-between py-2.5 border-b border-slate-50">
+              <div class="flex items-center gap-3">
+                <span class="text-xl">💼</span>
+                <div>
+                  <p class="text-sm font-medium text-slate-700">Salario</p>
+                  <p class="text-xs text-slate-400">Ingreso</p>
+                </div>
+              </div>
+              <span class="text-sm font-bold text-emerald-600">+$3.200.000</span>
+            </div>
+            <div class="flex items-center justify-between py-2.5">
+              <div class="flex items-center gap-3">
+                <span class="text-xl">🚌</span>
+                <div>
+                  <p class="text-sm font-medium text-slate-700">TransMilenio</p>
+                  <p class="text-xs text-slate-400">Transporte</p>
+                </div>
+              </div>
+              <span class="text-sm font-bold text-red-500">-$5.200</span>
+            </div>
+          </div>
+
+          <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-center gap-2">
+            <div class="w-2 h-2 rounded-full bg-[#00C4A3] animate-pulse"></div>
+            <span class="text-xs text-slate-400 font-medium">Datos en tiempo real</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      <div class="text-center p-6 rounded-xl bg-gradient-to-br from-[#00C4A3]/5 to-[#0EA5E9]/5 border border-[#00C4A3]/10">
+        <div class="text-4xl font-bold gradient-text mb-2">2 min</div>
+        <div class="text-slate-600">Para configurar tu primera cuenta</div>
+      </div>
+      <div class="text-center p-6 rounded-xl bg-gradient-to-br from-[#00C4A3]/5 to-[#0EA5E9]/5 border border-[#00C4A3]/10">
+        <div class="text-4xl font-bold gradient-text mb-2">100%</div>
+        <div class="text-slate-600">Gratuito para empezar</div>
+      </div>
+      <div class="text-center p-6 rounded-xl bg-gradient-to-br from-[#00C4A3]/5 to-[#0EA5E9]/5 border border-[#00C4A3]/10">
+        <div class="text-4xl font-bold gradient-text mb-2">COP</div>
+        <div class="text-slate-600">Formato colombiano nativo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROBLEM-SOLUTION ══════════════════════════════════════════ -->
+<section class="py-20 bg-[#1F2937] text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">¿Te suena familiar?</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+      <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-red-500/50 transition">
+        <div class="text-red-400 mb-4 text-3xl">❌</div>
+        <h3 class="text-xl font-bold mb-3">"No sé cuánto tengo en total entre todas mis cuentas"</h3>
+        <p class="text-slate-400">Tienes plata en Bancolombia, en Nequi y en Daviplata pero no sabes cuánto sumas en total.</p>
+      </div>
+      <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-red-500/50 transition">
+        <div class="text-red-400 mb-4 text-3xl">❌</div>
+        <h3 class="text-xl font-bold mb-3">"Registro mis gastos 3 días y luego lo abandono"</h3>
+        <p class="text-slate-400">Empiezas motivado, pero llevar las cuentas manualmente es tedioso y siempre terminas dejándolo.</p>
+      </div>
+      <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-red-500/50 transition">
+        <div class="text-red-400 mb-4 text-3xl">❌</div>
+        <h3 class="text-xl font-bold mb-3">"No sé si estoy ahorrando bien o mal"</h3>
+        <p class="text-slate-400">Sientes que deberías ahorrar más pero no tienes un diagnóstico real de tu situación financiera.</p>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <div class="inline-block bg-gradient-to-r from-[#00C4A3] to-[#0EA5E9] text-white px-6 py-3 rounded-full font-bold mb-8 shadow-lg">
+        FinanzIA resuelve los 3 problemas
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gradient-to-br from-[#00C4A3] to-[#00C4A3]/80 p-8 rounded-xl shadow-xl hover:scale-105 transition">
+          <div class="text-4xl mb-4">🏦</div>
+          <h3 class="text-xl font-bold mb-3">Un solo balance con todas tus cuentas</h3>
+          <p class="text-teal-50">Conecta Bancolombia, Nequi, Daviplata y cualquier cuenta. Ve tu balance real en un solo lugar.</p>
+        </div>
+        <div class="bg-gradient-to-br from-[#00C4A3] to-[#00C4A3]/80 p-8 rounded-xl shadow-xl hover:scale-105 transition">
+          <div class="text-4xl mb-4">⚡</div>
+          <h3 class="text-xl font-bold mb-3">Registra en segundos desde tu celular</h3>
+          <p class="text-teal-50">Diseñado para ser rápido. Registrar un gasto te toma menos de 10 segundos — y lo vas a mantener.</p>
+        </div>
+        <div class="bg-gradient-to-br from-[#00C4A3] to-[#00C4A3]/80 p-8 rounded-xl shadow-xl hover:scale-105 transition">
+          <div class="text-4xl mb-4">🩺</div>
+          <h3 class="text-xl font-bold mb-3">Test de salud financiera con diagnóstico real</h3>
+          <p class="text-teal-50">Responde 10 preguntas y obtén un diagnóstico preciso con recomendaciones concretas para mejorar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FEATURES ══════════════════════════════════════════════════ -->
+<section id="features" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Todo lo que necesitas en una sola app</h2>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto">FinanzIA reúne todas las herramientas financieras que una persona real necesita.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="group bg-gradient-to-br from-slate-50 to-white p-8 rounded-2xl border border-slate-200 hover:border-[#00C4A3] hover:shadow-xl transition">
+        <div class="text-[#00C4A3] mb-4 group-hover:scale-110 transition"><i data-lucide="bar-chart-3" class="w-8 h-8"></i></div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Control de cuentas</h3>
+        <p class="text-slate-600">Bancolombia, Nequi, Daviplata y más en un solo lugar. Ve tu balance real en segundos.</p>
+      </div>
+      <div class="group bg-gradient-to-br from-slate-50 to-white p-8 rounded-2xl border border-slate-200 hover:border-[#00C4A3] hover:shadow-xl transition">
+        <div class="text-[#00C4A3] mb-4 group-hover:scale-110 transition"><i data-lucide="dollar-sign" class="w-8 h-8"></i></div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Movimientos</h3>
+        <p class="text-slate-600">Registra ingresos y gastos en segundos desde tu celular. Sin complicaciones.</p>
+      </div>
+      <div class="group bg-gradient-to-br from-slate-50 to-white p-8 rounded-2xl border border-slate-200 hover:border-[#00C4A3] hover:shadow-xl transition">
+        <div class="text-[#00C4A3] mb-4 group-hover:scale-110 transition"><i data-lucide="trending-up" class="w-8 h-8"></i></div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Presupuestos y metas</h3>
+        <p class="text-slate-600">Define límites de gasto por categoría y ahorra con propósito hacia tus metas.</p>
+      </div>
+      <div class="group bg-gradient-to-br from-slate-50 to-white p-8 rounded-2xl border border-slate-200 hover:border-[#00C4A3] hover:shadow-xl transition">
+        <div class="text-[#00C4A3] mb-4 group-hover:scale-110 transition"><i data-lucide="zap" class="w-8 h-8"></i></div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Simuladores financieros</h3>
+        <p class="text-slate-600">Simula créditos, planes de ahorro y proyecta tu jubilación con datos reales.</p>
+      </div>
+      <div class="group bg-gradient-to-br from-slate-50 to-white p-8 rounded-2xl border border-slate-200 hover:border-[#00C4A3] hover:shadow-xl transition">
+        <div class="text-[#00C4A3] mb-4 group-hover:scale-110 transition"><i data-lucide="shield" class="w-8 h-8"></i></div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Test de salud financiera</h3>
+        <p class="text-slate-600">Sabe exactamente cómo estás. Diagnóstico real con recomendaciones concretas.</p>
+      </div>
+      <div class="group bg-gradient-to-br from-slate-50 to-white p-8 rounded-2xl border border-slate-200 hover:border-[#00C4A3] hover:shadow-xl transition">
+        <div class="text-[#00C4A3] mb-4 group-hover:scale-110 transition"><i data-lucide="brain" class="w-8 h-8"></i></div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Emiliano IA</h3>
+        <p class="text-slate-600">Tu asesor financiero personal con inteligencia artificial. Solo en el Plan Pro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HOW IT WORKS ══════════════════════════════════════════════ -->
+<section id="how-it-works" class="py-20 bg-gradient-to-br from-slate-50 to-[#00C4A3]/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Así de simple 👇</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <div class="w-16 h-16 bg-gradient-to-br from-[#00C4A3] to-[#0EA5E9] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">1</div>
+        <h3 class="text-2xl font-bold mb-4 text-gray-800">Crea tu cuenta gratis</h3>
+        <p class="text-slate-600 text-lg">En 2 minutos configuras tu perfil y agregas tus cuentas. Sin tarjeta de crédito.</p>
+      </div>
+      <div class="text-center bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <div class="w-16 h-16 bg-gradient-to-br from-[#00C4A3] to-[#0EA5E9] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">2</div>
+        <h3 class="text-2xl font-bold mb-4 text-gray-800">Registra tus movimientos</h3>
+        <p class="text-slate-600 text-lg">Ingresos y gastos desde tu celular en cualquier momento. Rápido y sin fricción.</p>
+      </div>
+      <div class="text-center bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <div class="w-16 h-16 bg-gradient-to-br from-[#00C4A3] to-[#0EA5E9] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">3</div>
+        <h3 class="text-2xl font-bold mb-4 text-gray-800">Toma mejores decisiones</h3>
+        <p class="text-slate-600 text-lg">FinanzIA analiza tus datos y te ayuda a entender en qué mejorar y cómo ahorrar más.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRICING ════════════════════════════════════════════════════ -->
+<section id="pricing" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Elige tu plan</h2>
+      <p class="text-xl text-slate-600">Empieza gratis. Actualiza cuando quieras. Sin permanencia.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+
+      <!-- Plan Gratis -->
+      <div class="relative bg-white rounded-2xl border-2 border-slate-200 p-8 hover:border-[#00C4A3] hover:shadow-2xl transition">
+        <div class="text-center mb-8">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Gratis</h3>
+          <p class="text-slate-600 mb-6">Para comenzar a controlar tus finanzas</p>
+          <div class="mb-1">
+            <span class="text-5xl font-bold text-gray-800">$0</span>
+          </div>
+          <p class="text-slate-500 text-sm">COP · Para siempre</p>
+        </div>
+        <a href="https://finanzia.xenda.co" class="btn-plan-outline w-full py-3 rounded-lg font-semibold transition mb-8 flex items-center justify-center bg-slate-100 text-gray-800 border border-slate-200">
+          Empezar gratis
+        </a>
+        <ul class="space-y-4">
+          <li class="flex items-start space-x-3">
+            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
+            <span class="text-slate-700">Hasta 2 cuentas</span>
+          </li>
+          <li class="flex items-start space-x-3">
+            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
+            <span class="text-slate-700">Registro de movimientos</span>
+          </li>
+          <li class="flex items-start space-x-3">
+            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
+            <span class="text-slate-700">Balance total</span>
+          </li>
+          <li class="flex items-start space-x-3">
+            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
+            <span class="text-slate-700">Categorías básicas</span>
+          </li>
+          <li class="flex items-start space-x-3 opacity-50">
+            <i data-lucide="x" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i>
+            <span class="text-slate-500">Presupuestos y metas</span>
+          </li>
+          <li class="flex items-start space-x-3 opacity-50">
+            <i data-lucide="x" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i>
+            <span class="text-slate-500">Simuladores</span>
+          </li>
+          <li class="flex items-start space-x-3 opacity-50">
+            <i data-lucide="x" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i>
+            <span class="text-slate-500">Emiliano IA</span>
+          </li>
+          <li class="flex items-start space-x-3 opacity-50">
+            <i data-lucide="x" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i>
+            <span class="text-slate-500">Reportes avanzados</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Plan Pro -->
+      <div class="relative bg-white rounded-2xl border-2 border-[#00C4A3] p-8 shadow-2xl scale-105">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+          <span class="bg-gradient-to-r from-[#00C4A3] to-[#0EA5E9] text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">Más Popular</span>
+        </div>
+        <div class="text-center mb-8">
+          <h3 class="text-2xl font-bold text-gray-800 mb-2">Pro</h3>
+          <p class="text-slate-600 mb-6">Para tomar el control total de tus finanzas</p>
+          <div class="mb-1">
+            <span class="text-5xl font-bold text-gray-800">$12.900</span>
+          </div>
+          <p class="text-slate-500 text-sm">COP / mes</p>
+        </div>
+        <a href="https://finanzia.xenda.co" class="w-full py-3 rounded-lg font-semibold transition mb-8 flex items-center justify-center bg-gradient-to-r from-[#00C4A3] to-[#0EA5E9] text-white hover:shadow-xl hover:scale-105">
+          Quiero el Pro
+        </a>
+        <ul class="space-y-4">
+          <li class="flex items-start space-x-3">
+            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
+            <span class="text-slate-700">Todo lo del plan Gratis</span>
+          </li>
+          <li class="flex items-start space-x-3">
+            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
+            <span class="text-slate-700">Cuentas ilimitadas</span>
+          </li>
+          <li class="flex items-start space-x-3">
+            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
+            <span class="text-slate-700">Categorías personalizadas</span>
+          </li>
+          <li class="flex items-start space-x-3">
+            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
+            <span class="text-slate-700">Presupuestos y metas</span>
+          </li>
+          <li class="flex items-start space-x-3">
+            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
+            <span class="text-slate-700">Simuladores financieros</span>
+          </li>
+          <li class="flex items-start space-x-3">
+            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
+            <span class="text-slate-700">Emiliano IA</span>
+          </li>
+          <li class="flex items-start space-x-3">
+            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
+            <span class="text-slate-700">Reportes avanzados</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ════════════════════════════════════════════════════════ -->
+<section id="faq" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">Preguntas Frecuentes</h2>
+      <p class="text-xl text-slate-600">Todo lo que necesitas saber sobre FinanzIA</p>
+    </div>
+    <div class="max-w-3xl mx-auto space-y-4">
+
+      <div class="bg-slate-50 rounded-xl overflow-hidden">
+        <button onclick="toggleFaq(0)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition">
+          <span class="font-semibold text-slate-900">¿FinanzIA es realmente gratis?</span>
+          <i id="faq-chevron-0" data-lucide="chevron-down" class="w-5 h-5 text-slate-600 transition-transform flex-shrink-0"></i>
+        </button>
+        <div id="faq-answer-0" class="hidden px-6 pb-4 text-slate-600">
+          Sí. El plan gratuito no tiene fecha de vencimiento. Puedes usarlo indefinidamente sin pagar nada.
+        </div>
+      </div>
+
+      <div class="bg-slate-50 rounded-xl overflow-hidden">
+        <button onclick="toggleFaq(1)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition">
+          <span class="font-semibold text-slate-900">¿Necesito descargar una app?</span>
+          <i id="faq-chevron-1" data-lucide="chevron-down" class="w-5 h-5 text-slate-600 transition-transform flex-shrink-0"></i>
+        </button>
+        <div id="faq-answer-1" class="hidden px-6 pb-4 text-slate-600">
+          No. FinanzIA funciona desde el navegador de tu celular como PWA. Sin instalación, sin tienda de apps.
+        </div>
+      </div>
+
+      <div class="bg-slate-50 rounded-xl overflow-hidden">
+        <button onclick="toggleFaq(2)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition">
+          <span class="font-semibold text-slate-900">¿Mis datos están seguros?</span>
+          <i id="faq-chevron-2" data-lucide="chevron-down" class="w-5 h-5 text-slate-600 transition-transform flex-shrink-0"></i>
+        </button>
+        <div id="faq-answer-2" class="hidden px-6 pb-4 text-slate-600">
+          Sí. Usamos Supabase con encriptación de extremo a extremo y políticas de seguridad por usuario. Tus datos son solo tuyos.
+        </div>
+      </div>
+
+      <div class="bg-slate-50 rounded-xl overflow-hidden">
+        <button onclick="toggleFaq(3)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition">
+          <span class="font-semibold text-slate-900">¿Funciona con bancos colombianos?</span>
+          <i id="faq-chevron-3" data-lucide="chevron-down" class="w-5 h-5 text-slate-600 transition-transform flex-shrink-0"></i>
+        </button>
+        <div id="faq-answer-3" class="hidden px-6 pb-4 text-slate-600">
+          Sí. FinanzIA está optimizado para Bancolombia, Nequi, Daviplata, Davivienda y cualquier cuenta que manejes en COP.
+        </div>
+      </div>
+
+      <div class="bg-slate-50 rounded-xl overflow-hidden">
+        <button onclick="toggleFaq(4)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition">
+          <span class="font-semibold text-slate-900">¿Puedo cancelar el Plan Pro?</span>
+          <i id="faq-chevron-4" data-lucide="chevron-down" class="w-5 h-5 text-slate-600 transition-transform flex-shrink-0"></i>
+        </button>
+        <div id="faq-answer-4" class="hidden px-6 pb-4 text-slate-600">
+          Sí, en cualquier momento sin cargos adicionales. Tu cuenta pasa automáticamente al plan Gratis.
+        </div>
+      </div>
+
+      <div class="bg-slate-50 rounded-xl overflow-hidden">
+        <button onclick="toggleFaq(5)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition">
+          <span class="font-semibold text-slate-900">¿Qué es Emiliano IA?</span>
+          <i id="faq-chevron-5" data-lucide="chevron-down" class="w-5 h-5 text-slate-600 transition-transform flex-shrink-0"></i>
+        </button>
+        <div id="faq-answer-5" class="hidden px-6 pb-4 text-slate-600">
+          Es tu asesor financiero personal con inteligencia artificial. Analiza tus gastos, detecta patrones y te da consejos específicos para mejorar. Disponible en el Plan Pro.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FINAL CTA ══════════════════════════════════════════════════ -->
+<section class="py-20 bg-gradient-to-r from-[#00C4A3] to-[#0EA5E9]">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Empieza a controlar tu dinero hoy</h2>
+    <p class="text-xl text-teal-50 mb-8 max-w-2xl mx-auto">Gratis para siempre en el plan básico. Sin tarjeta de crédito.</p>
+    <a href="https://finanzia.xenda.co" class="bg-white text-[#00C4A3] px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl hover:scale-105 transition inline-flex items-center space-x-2">
+      <span>Crear mi cuenta gratis</span>
+      <i data-lucide="arrow-right" class="w-5 h-5"></i>
+    </a>
+    <p class="text-teal-100 mt-4 text-sm">No se requiere tarjeta de crédito · Cancela cuando quieras</p>
+  </div>
+</section>
+
+<!-- ═══ CONTACT MODAL ══════════════════════════════════════════════ -->
+<div id="contact-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm" onclick="closeModal(event)">
+  <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full" onclick="event.stopPropagation()">
+    <div class="bg-gradient-to-r from-[#00C4A3] to-[#0EA5E9] text-white px-6 py-5 rounded-t-2xl">
+      <div class="flex justify-between items-center">
+        <div>
+          <h2 class="text-2xl font-bold">¿Tienes preguntas sobre FinanzIA?</h2>
+          <p class="text-teal-50 text-sm mt-1">Te responderemos en menos de 24 horas</p>
+        </div>
+        <button onclick="closeModal()" class="text-white hover:bg-white/20 rounded-full p-2 transition">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+    <form action="https://api.web3forms.com/submit" method="POST" class="p-6 space-y-4">
+      <input type="hidden" name="access_key" value="b0601c0f-6e9c-4221-a38a-bbc7cf552417" />
+      <input type="hidden" name="from_name" value="Formulario FinanzIA" />
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-semibold text-gray-800 mb-1.5">Nombre <span class="text-red-500">*</span></label>
+          <input type="text" name="nombre" required placeholder="Tu nombre completo"
+            class="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00C4A3] focus:border-transparent text-sm" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-800 mb-1.5">Email <span class="text-red-500">*</span></label>
+          <input type="email" name="email" required placeholder="tu@email.com"
+            class="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00C4A3] focus:border-transparent text-sm" />
+        </div>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-800 mb-1.5">Asunto <span class="text-red-500">*</span></label>
+        <select name="asunto" required class="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00C4A3] focus:border-transparent text-sm">
+          <option value="">Selecciona un asunto...</option>
+          <option>Consulta sobre planes</option>
+          <option>Problema con el pago</option>
+          <option>No puedo acceder a FinanzIA</option>
+          <option>Soporte técnico</option>
+          <option>Cancelar suscripción</option>
+          <option>Cambiar de plan</option>
+          <option>Sugerencia</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm font-semibold text-gray-800 mb-1.5">Mensaje <span class="text-red-500">*</span></label>
+        <textarea name="mensaje" required rows="5" placeholder="¿En qué podemos ayudarte?"
+          class="w-full px-3 py-2.5 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00C4A3] focus:border-transparent resize-none text-sm"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-gradient-to-r from-[#00C4A3] to-[#0EA5E9] text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl hover:scale-105 transition">
+        Enviar mensaje
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ══════════════════════════════════════════════════════ -->
+<footer class="bg-[#1F2937] text-white py-12">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+      <div class="mb-6 md:mb-0 text-center md:text-left">
+        <span class="text-2xl font-bold block">FinanzIA by Xenda</span>
+        <span class="text-sm text-slate-400">Tecnología sencilla para personas reales</span>
+      </div>
+      <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-slate-400 text-sm">
+        <button onclick="openModal()" class="hover:text-white transition">Contacto</button>
+        <a href="/privacidad.html" class="hover:text-white transition">Privacidad</a>
+        <a href="/terminos.html" class="hover:text-white transition">Términos</a>
+      </div>
+    </div>
+    <div class="border-t border-slate-700 pt-6 text-center text-slate-400 text-sm space-y-2">
+      <p>© 2026 Xenda. Todos los derechos reservados.</p>
+      <p>E-mail: <a href="mailto:soporte@xenda.co" class="text-[#00C4A3] hover:text-white transition font-medium">soporte@xenda.co</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll shadow
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('shadow-md', window.scrollY > 20);
+  }, { passive: true });
+
+  // Mobile menu
+  function toggleMenu() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  }
+
+  // Smooth scroll helpers
+  function scrollToPlans() {
+    document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
+  }
+  function scrollToHowItWorks() {
+    document.getElementById('how-it-works').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // FAQ accordion
+  function toggleFaq(index) {
+    const answer  = document.getElementById('faq-answer-'  + index);
+    const chevron = document.getElementById('faq-chevron-' + index);
+    const isOpen  = !answer.classList.contains('hidden');
+    // Close all
+    for (let i = 0; i < 6; i++) {
+      document.getElementById('faq-answer-'  + i)?.classList.add('hidden');
+      document.getElementById('faq-chevron-' + i)?.classList.remove('rotate-180');
+    }
+    // Open current if it was closed
+    if (!isOpen) {
+      answer.classList.remove('hidden');
+      chevron.classList.add('rotate-180');
+    }
+  }
+
+  // Contact modal
+  function openModal() {
+    document.getElementById('contact-modal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(e) {
+    if (!e || e.target === document.getElementById('contact-modal')) {
+      document.getElementById('contact-modal').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+  }
+
+  // Init Lucide icons
+  lucide.createIcons();
+</script>
+
+</body>
+</html>
