@@ -35,9 +35,9 @@
   /* LEGAL NAV */
   .legal-nav{background:#fff;border-bottom:1px solid #E2E8F0}
   .legal-nav-inner{max-width:1200px;margin:0 auto;padding:0 40px;height:60px;display:flex;align-items:center;justify-content:space-between}
-  .legal-nav-logo{display:flex;align-items:center;text-decoration:none;font-family:var(--fd);font-weight:900;font-size:22px;letter-spacing:-.03em;line-height:1}
-  .ln-x{color:#00C4A3}
-  .ln-enda{color:#0A0F1E}
+  .legal-nav-logo{display:flex;align-items:center;gap:5px;text-decoration:none;flex-shrink:0}
+  .legal-nav-logo img{height:34px;width:auto;display:block}
+  .ln-enda{font-family:var(--fd);font-weight:700;font-size:26px;letter-spacing:-.025em;color:var(--ink);line-height:1}
   .legal-nav-back{display:inline-flex;align-items:center;gap:6px;font-family:var(--fb);font-size:13px;font-weight:500;color:#64748B;text-decoration:none;border:1px solid #E2E8F0;border-radius:8px;padding:7px 14px;background:#F8FAFC;transition:color .15s,border-color .15s}
   .legal-nav-back:hover{color:#0A0F1E;border-color:#CBD5E1}
   /* HERO */
@@ -101,7 +101,8 @@
 <nav class="legal-nav">
   <div class="legal-nav-inner">
     <a href="https://xenda.co" class="legal-nav-logo" aria-label="Xenda">
-      <span class="ln-x">X</span><span class="ln-enda">enda</span>
+      <img src="/xenda-x.png" alt="">
+      <span class="ln-enda">enda</span>
     </a>
     <a href="https://xenda.co" class="legal-nav-back">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M11 7H3M6 4L3 7l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
