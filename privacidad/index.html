@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Política de privacidad — Xenda</title>
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="Cómo Xenda protege y gestiona tus datos personales.">
+  <meta property="og:title" content="Política de privacidad — Xenda">
+  <meta property="og:description" content="En Xenda tus datos son tuyos. Cumplimos la Ley 1581 de Colombia y el GDPR.">
+  <meta property="og:image" content="https://xenda.co/og-image.png">
+  <meta property="og:url" content="https://xenda.co">
+  <meta property="og:type" content="website">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+  :root {
+    --teal:#00C4A3; --azul:#0EA5E9; --indigo:#6366F1;
+    --grad:linear-gradient(135deg,#00C4A3 0%,#0EA5E9 100%);
+    --ink:#0A0F1E; --ink-soft:#64748B; --border:#E2E8F0;
+    --surface:#FFFFFF; --bg:#F8FAFC; --dk:#0A0F1E;
+    --fd:"Outfit",system-ui,sans-serif;
+    --fb:"Plus Jakarta Sans",system-ui,sans-serif;
+    --r:20px;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--fb);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.5}
+  p{text-wrap:pretty}
+  /* NAV */
+  .nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border);transition:box-shadow .25s}
+  .nav.scrolled{box-shadow:0 2px 20px rgba(10,15,30,.08)}
+  .nav-inner{max-width:1160px;margin:0 auto;padding:0 40px;height:68px;display:flex;align-items:center;gap:40px}
+  .nav-logo{display:flex;align-items:center;gap:5px;text-decoration:none;flex-shrink:0}
+  .logo-x{height:34px;width:auto;display:block}
+  .logo-enda{font-family:var(--fd);font-weight:700;font-size:26px;letter-spacing:-.025em;color:var(--ink);line-height:1}
+  .nav-links{display:flex;gap:28px;margin-left:auto}
+  .nav-links a{font-family:var(--fb);font-size:14px;font-weight:600;color:var(--ink-soft);text-decoration:none;transition:color .15s}
+  .nav-links a:hover{color:var(--ink)}
+  /* HERO */
+  .legal-hero{background:var(--grad);padding:72px 40px 80px;text-align:center;position:relative;overflow:hidden}
+  .legal-hero::before{content:"";position:absolute;top:-20%;right:-5%;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,.12) 0%,transparent 60%);pointer-events:none}
+  .legal-hero::after{content:"";position:absolute;bottom:40px;left:-5%;width:320px;height:320px;background:radial-gradient(circle,rgba(0,0,0,.08) 0%,transparent 65%);pointer-events:none}
+  .legal-hero-inner{max-width:680px;margin:0 auto;position:relative;z-index:1;padding-bottom:56px}
+  .legal-wave{position:absolute;bottom:-1px;left:0;right:0;line-height:0;pointer-events:none;z-index:2}
+  .legal-wave svg{display:block;width:100%;height:48px}
+  .legal-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.32);color:#fff;font-family:var(--fb);font-size:11px;font-weight:700;padding:5px 14px;border-radius:100px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px}
+  .legal-hero h1{font-family:var(--fd);font-weight:900;font-size:clamp(26px,4vw,46px);letter-spacing:-.03em;color:#fff;line-height:1.05;margin-bottom:12px}
+  .legal-date{color:rgba(255,255,255,.72);font-size:13px;font-family:var(--fb);margin-bottom:14px}
+  .legal-lead{color:rgba(255,255,255,.85);font-size:15px;font-family:var(--fb);max-width:540px;margin:0 auto;line-height:1.65}
+  /* CONTENT */
+  .legal-content{background:var(--bg);padding:64px 0 80px}
+  .legal-inner{max-width:800px;margin:0 auto;padding:0 48px}
+  .legal-section{display:flex;gap:20px;padding:32px 0;border-bottom:1px solid var(--border)}
+  .legal-section:last-of-type{border-bottom:none}
+  .sec-num{flex-shrink:0;width:28px;height:28px;background:var(--teal);color:#fff;border-radius:50%;font-family:var(--fd);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+  .sec-title{font-family:var(--fd);font-weight:700;font-size:18px;color:var(--ink);margin-bottom:10px;letter-spacing:-.01em}
+  .sec-text{font-family:var(--fb);font-size:15px;color:var(--ink-soft);line-height:1.65}
+  .sec-text+.sec-text{margin-top:10px}
+  .sec-text a{color:var(--teal);text-decoration:none}
+  .sec-text a:hover{text-decoration:underline}
+  .sec-text ul{margin:8px 0 0 20px;list-style:disc}
+  .sec-text li{margin-bottom:5px}
+  .legal-box{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:20px 24px;margin-top:40px}
+  .legal-box p{font-family:var(--fb);font-size:14px;color:var(--ink-soft);line-height:1.65}
+  .legal-box a{color:var(--teal);text-decoration:none}
+  /* COOKIES */
+  .cookie-cards{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+  .cookie-card{border:1px solid var(--border);border-radius:16px;padding:16px 18px}
+  .cookie-card-top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+  .cookie-card-title{font-family:var(--fb);font-weight:700;font-size:14px;color:var(--ink)}
+  .c-badge{font-size:10px;font-weight:700;padding:2px 9px;border-radius:100px;letter-spacing:.04em}
+  .c-green{background:rgba(0,196,163,.1);color:#00a389;border:1px solid rgba(0,196,163,.25)}
+  .c-blue{background:rgba(14,165,233,.1);color:#0284c7;border:1px solid rgba(14,165,233,.2)}
+  .c-indigo{background:rgba(99,102,241,.1);color:#4f46e5;border:1px solid rgba(99,102,241,.2)}
+  .browser-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+  .browser-card{border:1px solid var(--border);border-radius:12px;padding:12px 14px}
+  .browser-name{font-family:var(--fb);font-weight:700;font-size:13px;color:var(--ink);margin-bottom:3px}
+  .browser-path{font-family:var(--fb);font-size:12px;color:var(--ink-soft);line-height:1.5}
+  /* FOOTER */
+  footer{background:var(--dk);border-top:1px solid rgba(255,255,255,.06);padding:64px 40px 48px}
+  .ft-inner{max-width:1160px;margin:0 auto}
+  .ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;margin-bottom:56px}
+  .ft-brand-desc{font-family:var(--fb);font-size:14px;color:rgba(255,255,255,.38);line-height:1.7;margin-top:18px;max-width:260px}
+  .ft-col-lbl{font-family:var(--fb);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:16px}
+  .ft-col a{display:block;font-family:var(--fb);font-size:14px;font-weight:500;color:rgba(255,255,255,.52);text-decoration:none;padding:6px 0;transition:color .15s}
+  .ft-col a:hover{color:#fff}
+  .ft-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.07);padding-top:32px;gap:16px;flex-wrap:wrap}
+  .ft-copy{font-family:var(--fb);font-size:12px;color:rgba(255,255,255,.24)}
+  .ft-legal{display:flex;gap:24px}
+  .ft-legal a{font-family:var(--fb);font-size:12px;color:rgba(255,255,255,.3);text-decoration:none;transition:color .15s}
+  .ft-legal a:hover{color:rgba(255,255,255,.7)}
+  /* RESPONSIVE */
+  @media(max-width:960px){.ft-top{grid-template-columns:1fr;gap:36px}.browser-grid{grid-template-columns:1fr}}
+  @media(max-width:640px){.nav-inner{padding:0 20px}.nav-links{display:none}.legal-hero{padding:52px 20px 68px}.legal-inner{padding:0 20px}footer{padding-left:20px;padding-right:20px}}
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="main-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/" aria-label="Xenda">
+      <img src="/xenda-x.png" alt="" class="logo-x">
+      <span class="logo-enda">enda</span>
+    </a>
+    <div class="nav-links">
+      <a href="/#productos">Productos</a>
+      <a href="/#como-funciona">Cómo funciona</a>
+      <a href="/#nosotros">Nosotros</a>
+    </div>
+  </div>
+</nav>
+
+<section class="legal-hero">
+  <div class="legal-hero-inner">
+    <div class="legal-eyebrow">Política de privacidad · Legal</div>
+    <h1>Política de privacidad</h1>
+    <p class="legal-date">Última actualización: Mayo de 2026</p>
+    <p class="legal-lead">En Xenda tus datos son tuyos. Cumplimos con la Ley 1581 de 2012 de Colombia y el GDPR de la Unión Europea.</p>
+  </div>
+  <div class="legal-wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,24 C360,48 720,0 1080,24 C1260,36 1380,18 1440,24 L1440,48 L0,48 Z" fill="white"/>
+    </svg>
+  </div>
+</section>
+
+<div class="legal-content">
+  <div class="legal-inner">
+    <div class="legal-section">
+      <div class="sec-num">1</div>
+      <div class="sec-body">
+        <div class="sec-title">Quién responde por tus datos</div>
+      <p class="sec-text">Xenda es un proyecto tecnológico fundado por Jorge Quintero y Sofía Montejo, con operaciones orientadas al mercado colombiano y latinoamericano. Los operadores del servicio residen actualmente en Europa, por lo que esta política cumple tanto con la Ley 1581 de 2012 de Colombia como con el GDPR de la Unión Europea.</p>
+      <p class="sec-text">Para cualquier solicitud esríbenos a <a href="mailto:soporte@xenda.co">soporte@xenda.co</a></p>
+      </div>
+    </div>
+    <div class="legal-section">
+      <div class="sec-num">2</div>
+      <div class="sec-body">
+        <div class="sec-title">Qué información recopilamos</div>
+      <p class="sec-text">Recopilamos solo lo necesario para brindarte el servicio:</p>
+      <p class="sec-text"><ul><li>Datos de registro: nombre, correo electrónico, nombre de tu negocio</li><li>Datos de uso: transacciones, categorías y movimientos que registres</li><li>Datos técnicos: dirección IP, tipo de navegador, páginas visitadas</li><li>Datos de pago: procesados por Stripe — Xenda no almacena datos de tarjetas</li></ul></p>
+      </div>
+    </div>
+    <div class="legal-section">
+      <div class="sec-num">3</div>
+      <div class="sec-body">
+        <div class="sec-title">Para qué usamos tu información</div>
+      <p class="sec-text"><ul><li>Brindarte el servicio y mejorar tu experiencia</li><li>Enviarte actualizaciones, novedades y comunicaciones del producto</li><li>Detectar y prevenir fraudes o usos indebidos</li><li>Cumplir obligaciones legales en Colombia y la Unión Europea</li><li>Mejorar nuestros productos con análisis agregados y anónimos</li></ul></p>
+      </div>
+    </div>
+    <div class="legal-section">
+      <div class="sec-num">4</div>
+      <div class="sec-body">
+        <div class="sec-title">Con quién compartimos tu información</div>
+      <p class="sec-text">Solo compartimos tus datos con proveedores técnicos estrictamente necesarios:</p>
+      <p class="sec-text"><ul><li>Supabase — base de datos y autenticación</li><li>Vercel — alojamiento web</li><li>Stripe — procesamiento de pagos</li><li>Autoridades competentes cuando la ley lo exige</li></ul></p>
+      <p class="sec-text">Nunca vendemos tus datos a terceros ni los usamos para publicidad externa.</p>
+      </div>
+    </div>
+    <div class="legal-section">
+      <div class="sec-num">5</div>
+      <div class="sec-body">
+        <div class="sec-title">Tus derechos sobre tus datos</div>
+      <p class="sec-text">De acuerdo con la Ley 1581 de 2012 y el GDPR, tienes derecho a:</p>
+      <p class="sec-text"><ul><li>Conocer qué datos personales tenemos sobre ti</li><li>Actualizar o corregir tu información cuando sea inexacta</li><li>Solicitar la eliminación de tus datos cuando no sean necesarios</li><li>Revocar la autorización de tratamiento en cualquier momento</li><li>Portabilidad de tus datos en formato legible</li><li>Presentar quejas ante la SIC (Colombia) o la autoridad de protección de datos de tu país</li></ul></p>
+      <p class="sec-text">Para ejercer estos derechos esríbenos a <a href="mailto:soporte@xenda.co">soporte@xenda.co</a>. Respondemos en máximo 10 días hábiles.</p>
+      </div>
+    </div>
+    <div class="legal-section">
+      <div class="sec-num">6</div>
+      <div class="sec-body">
+        <div class="sec-title">Seguridad de tus datos</div>
+      <p class="sec-text">Usamos cifrado en tránsito (HTTPS/TLS) y en reposo. Nuestros proveedores cumplen estándares internacionales de seguridad.</p>
+      <p class="sec-text">Te recomendamos usar contraseñas fuertes y no compartir tus credenciales.</p>
+      </div>
+    </div>
+    <div class="legal-section">
+      <div class="sec-num">7</div>
+      <div class="sec-body">
+        <div class="sec-title">Por cuánto tiempo guardamos tus datos</div>
+      <p class="sec-text">Guardamos tu información mientras tu cuenta esté activa. Al eliminar tu cuenta, borramos tus datos en un plazo de 30 días calendario, excepto los que la ley nos obligue a conservar por más tiempo.</p>
+      </div>
+    </div>
+    <div class="legal-section">
+      <div class="sec-num">8</div>
+      <div class="sec-body">
+        <div class="sec-title">Menores de edad</div>
+      <p class="sec-text">Xenda no está dirigido a personas menores de 18 años. No recopilamos conscientemente datos de menores.</p>
+      <p class="sec-text">Si eres padre o tutor y crees que tu hijo nos proporcionó información sin tu consentimiento, contáctanos de inmediato.</p>
+      </div>
+    </div>
+    <div class="legal-section">
+      <div class="sec-num">9</div>
+      <div class="sec-body">
+        <div class="sec-title">Cambios en esta política</div>
+      <p class="sec-text">Cuando actualicemos esta política publicaremos los cambios aquí y te notificaremos por correo si son significativos. La fecha de actualización siempre aparece al inicio.</p>
+      </div>
+    </div>
+    <div class="legal-box"><p>Autoridades de supervisión: Puedes presentar quejas ante la Superintendencia de Industria y Comercio de Colombia (<a href="https://www.sic.gov.co" target="_blank">sic.gov.co</a>) o ante la autoridad de protección de datos de tu país de residencia.</p></div>
+  </div>
+</div>
+
+<footer>
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div>
+        <a href="/" aria-label="Xenda" style="display:flex;align-items:center;gap:5px;text-decoration:none;">
+          <img src="/xenda-x.png" alt="" style="height:30px;width:auto;display:block;">
+          <span style="font-family:var(--fd);font-weight:700;font-size:22px;letter-spacing:-.025em;color:rgba(255,255,255,.8);line-height:1;">enda</span>
+        </a>
+        <p class="ft-brand-desc">Hecha para todos, sin importar dónde estés. Tecnología que no necesita manual.</p>
+      </div>
+      <div class="ft-col">
+        <div class="ft-col-lbl">Productos</div>
+        <a href="https://finanzia.xenda.co">FinanzIA</a>
+        <a href="/#productos">Próximamente</a>
+      </div>
+      <div class="ft-col">
+        <div class="ft-col-lbl">Compañía</div>
+        <a href="/#nosotros">Nosotros</a>
+      </div>
+      <div class="ft-col">
+        <div class="ft-col-lbl">Soporte</div>
+        <a href="#">Centro de ayuda</a>
+        <a href="#">Contáctanos</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p class="ft-copy">© 2026 Xenda</p>
+      <div class="ft-legal">
+        <a href="/privacidad">Privacidad</a>
+        <a href="/terminos">Términos de uso</a>
+        <a href="/cookies">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
+</script>
+
+</body>
+</html>
