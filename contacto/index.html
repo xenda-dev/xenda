@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contáctanos — Xenda</title>
+  <meta name="description" content="¿Tienes alguna pregunta? Escríbenos — respondemos en menos de 24 horas.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Contáctanos — Xenda">
+  <meta property="og:description" content="¿Tienes alguna pregunta? Escríbenos — respondemos en menos de 24 horas.">
+  <meta property="og:image" content="https://xenda.co/og-image.png">
+  <meta property="og:url" content="https://xenda.co">
+  <meta property="og:type" content="website">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+  :root {
+    --teal:#00C4A3; --azul:#0EA5E9; --indigo:#6366F1;
+    --grad:linear-gradient(135deg,#00C4A3 0%,#0EA5E9 100%);
+    --ink:#0A0F1E; --ink-soft:#64748B;
+    --border:#E2E8F0; --surface:#FFFFFF; --bg:#F8FAFC; --bg-alt:#F0F4F8;
+    --dk:#0A0F1E;
+    --fd:"Outfit",system-ui,sans-serif;
+    --fb:"Plus Jakarta Sans",system-ui,sans-serif;
+    --r:20px; --r-btn:12px;
+    --sh:0 2px 12px rgba(0,0,0,.06);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--fb);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.5}
+  p{text-wrap:pretty}
+  a{color:inherit}
+
+  /* NAV */
+  .nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border);transition:box-shadow .25s}
+  .nav.scrolled{box-shadow:0 2px 20px rgba(10,15,30,.08)}
+  .nav-inner{max-width:1160px;margin:0 auto;padding:0 40px;height:68px;display:flex;align-items:center;gap:40px}
+  .nav-logo{display:flex;align-items:center;gap:5px;text-decoration:none;flex-shrink:0}
+  .logo-x{height:34px;width:auto;display:block}
+  .logo-enda{font-family:var(--fd);font-weight:700;font-size:26px;letter-spacing:-.025em;color:var(--ink);line-height:1}
+  .nav-links{display:flex;gap:28px;margin-left:auto}
+  .nav-links a{font-family:var(--fb);font-size:14px;font-weight:600;color:var(--ink-soft);text-decoration:none;transition:color .15s}
+  .nav-links a:hover{color:var(--ink)}
+
+  /* HERO */
+  .pg-hero{background:var(--grad);padding:72px 40px 80px;text-align:center;position:relative;overflow:hidden}
+  .pg-hero::before{content:"";position:absolute;top:-20%;right:-5%;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,.12) 0%,transparent 60%);pointer-events:none}
+  .pg-hero::after{content:"";position:absolute;bottom:40px;left:-5%;width:320px;height:320px;background:radial-gradient(circle,rgba(0,0,0,.08) 0%,transparent 65%);pointer-events:none}
+  .pg-hero-inner{max-width:680px;margin:0 auto;position:relative;z-index:1;padding-bottom:56px}
+  .pg-wave{position:absolute;bottom:-1px;left:0;right:0;line-height:0;pointer-events:none;z-index:2}
+  .pg-wave svg{display:block;width:100%;height:48px}
+  .pg-eyebrow{display:inline-flex;align-items:center;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.32);color:#fff;font-family:var(--fb);font-size:11px;font-weight:700;padding:5px 14px;border-radius:100px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:20px;opacity:.85}
+  .pg-hero h1{font-family:var(--fd);font-weight:900;font-size:clamp(40px,5vw,64px);letter-spacing:-.03em;color:#fff;line-height:1;margin-bottom:16px}
+  .pg-lead{color:rgba(255,255,255,.95);font-size:18px;font-family:var(--fb);font-weight:500;max-width:560px;margin:0 auto;line-height:1.6}
+
+  /* PAGE BODY */
+  .pg-body{background:var(--bg);padding:64px 0 80px}
+  .pg-inner{max-width:800px;margin:0 auto;padding:0 48px}
+
+  /* FAQ */
+  .faq-cat{color:var(--teal);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-family:var(--fb);margin:36px 0 12px}
+  .faq-cat:first-child{margin-top:0}
+  .faq-item{border:1px solid var(--border);border-radius:16px;background:var(--surface);margin-bottom:8px;overflow:hidden}
+  .faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:var(--fb);font-size:15px;font-weight:600;color:var(--ink);line-height:1.4}
+  .faq-q:hover{background:var(--bg)}
+  .faq-icon{font-size:22px;color:var(--teal);line-height:1;flex-shrink:0;transition:transform .2s;font-weight:300}
+  .faq-item.open .faq-icon{transform:rotate(45deg)}
+  .faq-a{display:none;border-top:1px solid var(--border);padding:12px 18px 14px;font-family:var(--fb);font-size:15px;color:var(--ink-soft);line-height:1.65}
+  .faq-item.open .faq-a{display:block}
+  .faq-a a{color:var(--teal);text-decoration:none}
+  .faq-a a:hover{text-decoration:underline}
+
+  /* HELP CTA */
+  .help-cta{background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--r);padding:20px 28px;display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:40px;flex-wrap:wrap}
+  .help-cta-title{font-family:var(--fd);font-weight:700;font-size:18px;color:var(--ink);margin-bottom:4px}
+  .help-cta-desc{font-family:var(--fb);font-size:14px;color:var(--ink-soft)}
+  .btn-p{display:inline-flex;align-items:center;gap:6px;background:var(--grad);color:#fff;font-family:var(--fb);font-size:14px;font-weight:600;padding:10px 20px;border-radius:var(--r-btn);text-decoration:none;transition:transform .15s,box-shadow .15s;box-shadow:0 4px 14px rgba(0,196,163,.28);white-space:nowrap}
+  .btn-p:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,196,163,.4)}
+
+  /* CONTACT GRID */
+  .contact-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:start}
+  .form-group{margin-bottom:16px}
+  .form-label{display:block;font-family:var(--fb);font-size:13px;font-weight:600;color:var(--ink);margin-bottom:6px}
+  .form-input{width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:10px;font-family:var(--fb);font-size:14px;color:var(--ink);background:var(--surface);outline:none;transition:border-color .15s,box-shadow .15s}
+  .form-input:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,196,163,.1)}
+  textarea.form-input{resize:vertical}
+  .form-submit{width:100%;padding:12px;background:var(--grad);color:#fff;border:none;border-radius:var(--r-btn);font-family:var(--fb);font-size:15px;font-weight:600;cursor:pointer;transition:transform .15s,box-shadow .15s;box-shadow:0 4px 14px rgba(0,196,163,.28)}
+  .form-submit:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,196,163,.4)}
+
+  /* CHANNELS */
+  .channels-label{font-family:var(--fb);font-size:12px;font-weight:600;color:var(--ink-soft);letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+  .channel-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:20px;display:flex;gap:14px;align-items:flex-start;text-decoration:none;transition:box-shadow .15s,transform .15s;margin-bottom:12px}
+  .channel-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.06);transform:translateY(-1px)}
+  .ch-ico{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .ch-ico.tg{background:#E8F4FD}
+  .ch-ico.em{background:rgba(0,196,163,.1)}
+  .ch-name{font-family:var(--fb);font-size:14px;font-weight:700;color:var(--ink);margin-bottom:2px}
+  .ch-handle{font-family:var(--fb);font-size:13px;color:var(--teal);font-weight:600;margin-bottom:4px}
+  .ch-desc{font-family:var(--fb);font-size:13px;color:var(--ink-soft);line-height:1.5}
+
+  /* SUCCESS */
+  .success-msg{display:none;text-align:center;padding:48px 24px}
+  .success-ico{width:56px;height:56px;background:var(--grad);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+  .success-title{font-family:var(--fd);font-weight:700;font-size:22px;color:var(--ink);margin-bottom:8px}
+  .success-text{font-family:var(--fb);font-size:15px;color:var(--ink-soft);line-height:1.65;margin-bottom:24px}
+  .success-back{color:var(--teal);font-family:var(--fb);font-size:14px;font-weight:600;text-decoration:none}
+  .success-back:hover{text-decoration:underline}
+
+  /* FOOTER */
+  footer{background:var(--dk);border-top:1px solid rgba(255,255,255,.06);padding:64px 40px 48px}
+  .ft-inner{max-width:1160px;margin:0 auto}
+  .ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;margin-bottom:56px}
+  .ft-brand-desc{font-family:var(--fb);font-size:14px;color:rgba(255,255,255,.38);line-height:1.7;margin-top:18px;max-width:260px}
+  .ft-col-lbl{font-family:var(--fb);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:16px}
+  .ft-col a{display:block;font-family:var(--fb);font-size:14px;font-weight:500;color:rgba(255,255,255,.52);text-decoration:none;padding:6px 0;transition:color .15s}
+  .ft-col a:hover{color:#fff}
+  .ft-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.07);padding-top:32px;gap:16px;flex-wrap:wrap}
+  .ft-copy{font-family:var(--fb);font-size:12px;color:rgba(255,255,255,.24)}
+  .ft-legal{display:flex;gap:24px}
+  .ft-legal a{font-family:var(--fb);font-size:12px;color:rgba(255,255,255,.3);text-decoration:none;transition:color .15s}
+  .ft-legal a:hover{color:rgba(255,255,255,.7)}
+
+  /* RESPONSIVE */
+  @media(max-width:960px){.ft-top{grid-template-columns:1fr;gap:36px}}
+  @media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
+  @media(max-width:640px){
+    .nav-inner{padding:0 20px}.nav-links{display:none}
+    .pg-hero{padding:52px 20px 68px}
+    .pg-inner{padding:0 20px}
+    footer{padding-left:20px;padding-right:20px}
+    .help-cta{flex-direction:column;align-items:flex-start}
+  }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="main-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/" aria-label="Xenda">
+      <img src="/xenda-x.png" alt="" class="logo-x">
+      <span class="logo-enda">enda</span>
+    </a>
+    <div class="nav-links">
+      <a href="/#productos">Productos</a>
+      <a href="/#como-funciona">Cómo funciona</a>
+      <a href="/#nosotros">Nosotros</a>
+    </div>
+  </div>
+</nav>
+
+<section class="pg-hero">
+  <div class="pg-hero-inner">
+    <div class="pg-eyebrow">Soporte · Contáctanos</div>
+    <h1>Contáctanos</h1>
+    <p class="pg-lead">¿Tienes una pregunta que no está en el Centro de ayuda? Escríbenos — respondemos en menos de 24 horas.</p>
+  </div>
+  <div class="pg-wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 48" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,24 C360,48 720,0 1080,24 C1260,36 1380,18 1440,24 L1440,48 L0,48 Z" fill="white"/>
+    </svg>
+  </div>
+</section>
+
+<div class="pg-body">
+  <div class="pg-inner">
+    <div class="contact-grid">
+
+      <!-- FORM -->
+      <div>
+        <div id="contact-form">
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="b0601c0f-6e9c-4221-a38a-bbc7cf552417">
+            <input type="hidden" name="subject" value="Nuevo mensaje desde xenda.co/contacto">
+            <input type="hidden" name="from_name" value="Xenda Web">
+            <input type="hidden" name="redirect" value="https://xenda.co/contacto?enviado=true">
+            <input type="checkbox" name="botcheck" style="display:none;">
+
+            <div class="form-group">
+              <label class="form-label" for="f-name">Tu nombre</label>
+              <input id="f-name" type="text" name="name" class="form-input" placeholder="Jorge Quintero" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-email">Correo electrónico</label>
+              <input id="f-email" type="email" name="email" class="form-input" placeholder="hola@ejemplo.co" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-subject">Asunto</label>
+              <select id="f-subject" name="subject_type" class="form-input" required>
+                <option value="" disabled selected>Selecciona un asunto…</option>
+                <option>Tengo una pregunta general</option>
+                <option>Problema con mi cuenta</option>
+                <option>Problema con un pago</option>
+                <option>Solicitud sobre mis datos</option>
+                <option>Quiero cancelar mi plan</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="f-msg">Mensaje</label>
+              <textarea id="f-msg" name="message" class="form-input" rows="5" placeholder="Cuéntanos cómo podemos ayudarte…" required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Enviar mensaje</button>
+          </form>
+        </div>
+
+        <div class="success-msg" id="success-msg">
+          <div class="success-ico">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="success-title">¡Mensaje recibido!</div>
+          <p class="success-text">Te respondemos en menos de 24 horas en tu correo. Gracias por escribirnos.</p>
+          <a href="https://xenda.co" class="success-back">← Volver al inicio</a>
+        </div>
+      </div>
+
+      <!-- CHANNELS -->
+      <div>
+        <div class="channels-label">Otros canales</div>
+
+        <a href="https://t.me/XendaSoporte" target="_blank" rel="noopener" class="channel-card">
+          <div class="ch-ico tg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#0088CC"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L6.922 14.073 3.98 13.16c-.642-.204-.657-.642.136-.954l11.57-4.461c.537-.194 1.006.131.834.954-.001-.001-.001 0 0 0z"/></svg>
+          </div>
+          <div>
+            <div class="ch-name">Telegram</div>
+            <div class="ch-handle">@XendaSoporte</div>
+            <p class="ch-desc">Respuesta rápida vía bot. Ideal para consultas sobre productos.</p>
+          </div>
+        </a>
+
+        <a href="mailto:soporte@xenda.co" class="channel-card">
+          <div class="ch-ico em">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00C4A3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+          </div>
+          <div>
+            <div class="ch-name">Correo</div>
+            <div class="ch-handle">soporte@xenda.co</div>
+            <p class="ch-desc">Para solicitudes formales sobre datos, pagos o cuenta.</p>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  if (window.location.search.includes('enviado=true')) {
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('success-msg').style.display = 'block';
+  }
+</script>
+
+<footer>
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div>
+        <a href="/" aria-label="Xenda" style="display:flex;align-items:center;gap:5px;text-decoration:none;">
+          <img src="/xenda-x.png" alt="" style="height:30px;width:auto;display:block;">
+          <span style="font-family:var(--fd);font-weight:700;font-size:22px;letter-spacing:-.025em;color:rgba(255,255,255,.8);line-height:1;">enda</span>
+        </a>
+        <p class="ft-brand-desc">Hecha para todos, sin importar dónde estés. Tecnología que no necesita manual.</p>
+      </div>
+      <div class="ft-col">
+        <div class="ft-col-lbl">Productos</div>
+        <a href="https://finanzia.xenda.co">FinanzIA</a>
+        <a href="/#productos">Próximamente</a>
+      </div>
+      <div class="ft-col">
+        <div class="ft-col-lbl">Compañía</div>
+        <a href="/#nosotros">Nosotros</a>
+      </div>
+      <div class="ft-col">
+        <div class="ft-col-lbl">Soporte</div>
+        <a href="/ayuda">Centro de ayuda</a>
+        <a href="/contacto">Contáctanos</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p class="ft-copy">© 2026 Xenda</p>
+      <div class="ft-legal">
+        <a href="/privacidad">Privacidad</a>
+        <a href="/terminos">Términos de uso</a>
+        <a href="/cookies">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
+</script>
+
+</body>
+</html>
