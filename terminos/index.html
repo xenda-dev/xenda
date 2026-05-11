@@ -32,16 +32,14 @@
   html{scroll-behavior:smooth}
   body{font-family:var(--fb);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.5}
   p{text-wrap:pretty}
-  /* NAV */
-  .nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border);transition:box-shadow .25s}
-  .nav.scrolled{box-shadow:0 2px 20px rgba(10,15,30,.08)}
-  .nav-inner{max-width:1160px;margin:0 auto;padding:0 40px;height:68px;display:flex;align-items:center;gap:40px}
-  .nav-logo{display:flex;align-items:center;gap:5px;text-decoration:none;flex-shrink:0}
-  .logo-x{height:34px;width:auto;display:block}
-  .logo-enda{font-family:var(--fd);font-weight:700;font-size:26px;letter-spacing:-.025em;color:var(--ink);line-height:1}
-  .nav-links{display:flex;gap:28px;margin-left:auto}
-  .nav-links a{font-family:var(--fb);font-size:14px;font-weight:600;color:var(--ink-soft);text-decoration:none;transition:color .15s}
-  .nav-links a:hover{color:var(--ink)}
+  /* LEGAL NAV */
+  .legal-nav{background:#fff;border-bottom:1px solid #E2E8F0}
+  .legal-nav-inner{max-width:1200px;margin:0 auto;padding:0 40px;height:60px;display:flex;align-items:center;justify-content:space-between}
+  .legal-nav-logo{display:flex;align-items:center;text-decoration:none;font-family:var(--fd);font-weight:900;font-size:22px;letter-spacing:-.03em;line-height:1}
+  .ln-x{color:#00C4A3}
+  .ln-enda{color:#0A0F1E}
+  .legal-nav-back{display:inline-flex;align-items:center;gap:6px;font-family:var(--fb);font-size:13px;font-weight:500;color:#64748B;text-decoration:none;border:1px solid #E2E8F0;border-radius:8px;padding:7px 14px;background:#F8FAFC;transition:color .15s,border-color .15s}
+  .legal-nav-back:hover{color:#0A0F1E;border-color:#CBD5E1}
   /* HERO */
   .legal-hero{background:var(--grad);padding:72px 40px 80px;text-align:center;position:relative;overflow:hidden}
   .legal-hero::before{content:"";position:absolute;top:-20%;right:-5%;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,.12) 0%,transparent 60%);pointer-events:none}
@@ -82,37 +80,33 @@
   .browser-card{border:1px solid var(--border);border-radius:12px;padding:12px 14px}
   .browser-name{font-family:var(--fb);font-weight:700;font-size:13px;color:var(--ink);margin-bottom:3px}
   .browser-path{font-family:var(--fb);font-size:12px;color:var(--ink-soft);line-height:1.5}
-  /* FOOTER */
-  footer{background:var(--dk);border-top:1px solid rgba(255,255,255,.06);padding:64px 40px 48px}
-  .ft-inner{max-width:1160px;margin:0 auto}
-  .ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;margin-bottom:56px}
-  .ft-brand-desc{font-family:var(--fb);font-size:14px;color:rgba(255,255,255,.38);line-height:1.7;margin-top:18px;max-width:260px}
-  .ft-col-lbl{font-family:var(--fb);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:16px}
-  .ft-col a{display:block;font-family:var(--fb);font-size:14px;font-weight:500;color:rgba(255,255,255,.52);text-decoration:none;padding:6px 0;transition:color .15s}
-  .ft-col a:hover{color:#fff}
-  .ft-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.07);padding-top:32px;gap:16px;flex-wrap:wrap}
-  .ft-copy{font-family:var(--fb);font-size:12px;color:rgba(255,255,255,.24)}
-  .ft-legal{display:flex;gap:24px}
-  .ft-legal a{font-family:var(--fb);font-size:12px;color:rgba(255,255,255,.3);text-decoration:none;transition:color .15s}
-  .ft-legal a:hover{color:rgba(255,255,255,.7)}
+  /* LEGAL FOOTER */
+  .legal-footer{border-top:1px solid #E2E8F0;background:#fff;padding:20px 40px}
+  .legal-footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .lf-copy{font-family:var(--fb);font-size:12px;color:#64748B}
+  .lf-links{display:flex;align-items:center;gap:4px}
+  .lf-link{font-family:var(--fb);font-size:12px;color:#64748B;text-decoration:none;padding:3px 6px;border-radius:6px;transition:background .15s,color .15s}
+  .lf-link:hover{background:#F8FAFC}
+  .lf-link.active{color:#00C4A3;font-weight:600}
+  .lf-sep{color:#CBD5E1;font-size:12px;padding:0 2px}
+  .lf-email{font-family:var(--fb);font-size:12px;color:#00C4A3;text-decoration:none}
+  .lf-email:hover{text-decoration:underline}
   /* RESPONSIVE */
-  @media(max-width:960px){.ft-top{grid-template-columns:1fr;gap:36px}.browser-grid{grid-template-columns:1fr}}
-  @media(max-width:640px){.nav-inner{padding:0 20px}.nav-links{display:none}.legal-hero{padding:52px 20px 68px}.legal-inner{padding:0 20px}footer{padding-left:20px;padding-right:20px}}
+  @media(max-width:960px){.browser-grid{grid-template-columns:1fr}}
+  @media(max-width:640px){.legal-nav-inner{padding:0 20px}.legal-hero{padding:52px 20px 68px}.legal-inner{padding:0 20px}.legal-footer{padding:20px}.legal-footer-inner{flex-direction:column;text-align:center;gap:10px}}
   </style>
 </head>
 <body>
 
-<nav class="nav" id="main-nav">
-  <div class="nav-inner">
-    <a class="nav-logo" href="/" aria-label="Xenda">
-      <img src="/xenda-x.png" alt="" class="logo-x">
-      <span class="logo-enda">enda</span>
+<nav class="legal-nav">
+  <div class="legal-nav-inner">
+    <a href="https://xenda.co" class="legal-nav-logo" aria-label="Xenda">
+      <span class="ln-x">X</span><span class="ln-enda">enda</span>
     </a>
-    <div class="nav-links">
-      <a href="/#productos">Productos</a>
-      <a href="/#como-funciona">Cómo funciona</a>
-      <a href="/#nosotros">Nosotros</a>
-    </div>
+    <a href="https://xenda.co" class="legal-nav-back">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M11 7H3M6 4L3 7l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Volver a xenda.co
+    </a>
   </div>
 </nav>
 
@@ -222,46 +216,19 @@
   </div>
 </div>
 
-<footer>
-  <div class="ft-inner">
-    <div class="ft-top">
-      <div>
-        <a href="/" aria-label="Xenda" style="display:flex;align-items:center;gap:5px;text-decoration:none;">
-          <img src="/xenda-x.png" alt="" style="height:30px;width:auto;display:block;">
-          <span style="font-family:var(--fd);font-weight:700;font-size:22px;letter-spacing:-.025em;color:rgba(255,255,255,.8);line-height:1;">enda</span>
-        </a>
-        <p class="ft-brand-desc">Hecha para todos, sin importar dónde estés. Tecnología que no necesita manual.</p>
-      </div>
-      <div class="ft-col">
-        <div class="ft-col-lbl">Productos</div>
-        <a href="https://finanzia.xenda.co">FinanzIA</a>
-        <a href="/#productos">Próximamente</a>
-      </div>
-      <div class="ft-col">
-        <div class="ft-col-lbl">Compañía</div>
-        <a href="/#nosotros">Nosotros</a>
-      </div>
-      <div class="ft-col">
-        <div class="ft-col-lbl">Soporte</div>
-        <a href="#">Centro de ayuda</a>
-        <a href="#">Contáctanos</a>
-      </div>
+<footer class="legal-footer">
+  <div class="legal-footer-inner">
+    <span class="lf-copy">© 2026 Xenda</span>
+    <div class="lf-links">
+      <a href="/terminos" class="lf-link active">Términos</a>
+      <span class="lf-sep">·</span>
+      <a href="/privacidad" class="lf-link">Privacidad</a>
+      <span class="lf-sep">·</span>
+      <a href="/cookies" class="lf-link">Cookies</a>
     </div>
-    <div class="ft-bottom">
-      <p class="ft-copy">© 2026 Xenda</p>
-      <div class="ft-legal">
-        <a href="/privacidad">Privacidad</a>
-        <a href="/terminos">Términos de uso</a>
-        <a href="/cookies">Cookies</a>
-      </div>
-    </div>
+    <a href="mailto:soporte@xenda.co" class="lf-email">soporte@xenda.co</a>
   </div>
 </footer>
-
-<script>
-  const nav = document.getElementById('main-nav');
-  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
-</script>
 
 </body>
 </html>
