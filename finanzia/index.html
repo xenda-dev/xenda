@@ -132,7 +132,67 @@
               <div style="color:#fff;font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1.1;margin-bottom:3px;">$4.820.500</div>
               <div style="color:rgba(255,255,255,.55);font-size:9px;">COP · 3 cuentas</div>
             </div>
-            <!-- Stats -->
+            <!-- Stats (income/expense) -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 10px 0;">
+              <div style="background:#1b2336;border-radius:12px;padding:10px;">
+                <div style="color:#4ade80;font-size:8px;font-weight:700;letter-spacing:.1em;margin-bottom:3px;">↑ INGRESOS</div>
+                <div style="color:#fff;font-size:13px;font-weight:700;">$3.200.000</div>
+                <div style="color:rgba(255,255,255,.3);font-size:8px;">Este mes</div>
+              </div>
+              <div style="background:#1b2336;border-radius:12px;padding:10px;">
+                <div style="color:#f87171;font-size:8px;font-weight:700;letter-spacing:.1em;margin-bottom:3px;">↓ GASTOS</div>
+                <div style="color:#fff;font-size:13px;font-weight:700;">$1.847.500</div>
+                <div style="color:rgba(255,255,255,.3);font-size:8px;">Este mes</div>
+              </div>
+            </div>
+            <!-- Transactions -->
+            <div style="padding:10px 10px 8px;">
+              <div style="color:rgba(255,255,255,.3);font-size:8px;font-weight:700;letter-spacing:.14em;margin-bottom:7px;">MOVIMIENTOS</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05);">
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <div style="width:30px;height:30px;background:#1b2336;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;">🛒</div>
+                  <div>
+                    <div style="color:#fff;font-size:10px;font-weight:600;">Supermercado</div>
+                    <div style="color:rgba(255,255,255,.3);font-size:8px;">Alimentación</div>
+                  </div>
+                </div>
+                <span style="color:#f87171;font-size:10px;font-weight:700;">-$85.000</span>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05);">
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <div style="width:30px;height:30px;background:#1b2336;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;">💼</div>
+                  <div>
+                    <div style="color:#fff;font-size:10px;font-weight:600;">Salario</div>
+                    <div style="color:rgba(255,255,255,.3);font-size:8px;">Ingreso</div>
+                  </div>
+                </div>
+                <span style="color:#4ade80;font-size:10px;font-weight:700;">+$3.200.000</span>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;">
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <div style="width:30px;height:30px;background:#1b2336;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;">🚌</div>
+                  <div>
+                    <div style="color:#fff;font-size:10px;font-weight:600;">Transporte</div>
+                    <div style="color:rgba(255,255,255,.3);font-size:8px;">Transporte</div>
+                  </div>
+                </div>
+                <span style="color:#f87171;font-size:10px;font-weight:700;">-$5.200</span>
+              </div>
+            </div>
+            <!-- Screen home indicator -->
+            <div style="text-align:center;padding:4px 0 8px;">
+              <div style="display:inline-block;width:72px;height:3px;background:rgba(255,255,255,.12);border-radius:2px;"></div>
+            </div>
+          </div>
+          <!-- Home bar -->
+          <div style="text-align:center;padding:7px 0 4px;">
+            <div style="display:inline-block;width:80px;height:4px;background:rgba(255,255,255,.2);border-radius:2px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-4xl mx-auto">
       <div class="text-center p-5 rounded-xl bg-gradient-to-br from-[#00C4A3]/5 to-[#0EA5E9]/5 border border-[#00C4A3]/10">
         <div class="text-3xl font-bold gradient-text mb-1">15+</div>
@@ -244,7 +304,6 @@
         <p class="text-slate-600">Tu asistente financiero con inteligencia artificial. Pregunta, analiza y recibe recomendaciones personalizadas.</p>
       </div>
     </div>
-    </div>
   </div>
 </section>
 
@@ -282,7 +341,7 @@
       <p class="text-xl text-slate-600 max-w-2xl mx-auto">Empieza gratis. Sube cuando lo necesites. Sin contratos, cancela cuando quieras.</p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-4 items-start">
+    <div class="grid md:grid-cols-3 gap-4 items-stretch">
 
       <!-- Plan Gratis -->
       <div class="relative bg-white rounded-2xl border border-slate-200 p-7 flex flex-col hover:shadow-lg transition">
@@ -405,11 +464,11 @@
 
       <div class="bg-slate-50 rounded-xl overflow-hidden">
         <button onclick="toggleFaq(3)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-100 transition">
-          <span class="font-semibold text-slate-900">¿Funciona con bancos colombianos?</span>
+          <span class="font-semibold text-slate-900">¿Funciona con cualquier banco o cuenta?</span>
           <i id="faq-chevron-3" data-lucide="chevron-down" class="w-5 h-5 text-slate-600 transition-transform flex-shrink-0"></i>
         </button>
         <div id="faq-answer-3" class="hidden px-6 pb-4 text-slate-600">
-          Sí. FinanzIA está optimizado para Bancolombia, Nequi, Daviplata, Davivienda y cualquier cuenta que manejes en COP.
+          Sí. FinanzIA funciona con cualquier banco o cuenta, en cualquier país. Puedes registrar tus movimientos en cualquier divisa — no hace falta conexión directa con tu banco.
         </div>
       </div>
 
@@ -510,7 +569,7 @@
   <div class="container mx-auto px-6">
     <div class="flex flex-col md:flex-row justify-between items-center mb-8">
       <div class="mb-6 md:mb-0 text-center md:text-left">
-        <span class="text-2xl font-bold block">FinanzIA by Xenda</span>
+        <span class="text-2xl font-bold block">FinanzIA by <img src="/xenda-x.png" alt="Xenda" style="height:22px;width:auto;display:inline-block;vertical-align:middle;margin:0 2px -2px;">enda</span>
         <span class="text-sm text-slate-400">Tecnología sencilla para personas reales</span>
       </div>
       <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-slate-400 text-sm">
