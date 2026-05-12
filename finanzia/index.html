@@ -22,6 +22,14 @@
       background-image: linear-gradient(135deg, #00C4A3, #0EA5E9);
       color: #fff;
     }
+    /* Gradient ONLY for Pro price — isolated, no inheritance */
+    .plan-price-grad {
+      background: linear-gradient(135deg, #00C4A3, #0EA5E9);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
     @keyframes float {
       0%, 100% { transform: translateY(0px); }
       50%       { transform: translateY(-14px); }
@@ -73,17 +81,16 @@
       <div class="text-center md:text-left">
         <div class="inline-flex items-center space-x-2 bg-gradient-to-r from-[#00C4A3]/10 to-[#0EA5E9]/10 text-[#00C4A3] px-4 py-2 rounded-full mb-6 border border-[#00C4A3]/20">
           <i data-lucide="zap" class="w-4 h-4"></i>
-          <span class="text-sm font-medium">App de finanzas personales · Colombia</span>
+          <span class="text-sm font-medium">Finanzas personales · Inteligencia artificial</span>
         </div>
 
         <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight">
-          Deja de perder dinero
-          <span class="gradient-text"> sin saber por qué</span>
+          Controla tu dinero.
+          <span class="block font-normal text-gray-700 mt-1" style="opacity:0.85;">Sin complicaciones.</span>
         </h1>
 
         <p class="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
-          FinanzIA controla tus cuentas, gastos y metas con inteligencia artificial.
-          Simple, rápido y diseñado para personas reales.
+          Registra ingresos, gastos y metas en cualquier divisa. FinanzIA entiende tus finanzas y te ayuda a tomar mejores decisiones — desde cualquier lugar del mundo.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-8">
@@ -96,20 +103,7 @@
           </button>
         </div>
 
-        <div class="flex items-center justify-center md:justify-start text-sm text-slate-500 flex-wrap gap-4">
-          <div class="flex items-center space-x-2">
-            <i data-lucide="check-circle-2" class="w-5 h-5 text-[#00C4A3]"></i>
-            <span>Plan gratuito disponible</span>
-          </div>
-          <div class="flex items-center space-x-2">
-            <i data-lucide="check-circle-2" class="w-5 h-5 text-[#00C4A3]"></i>
-            <span>Sin tarjeta de crédito</span>
-          </div>
-          <div class="flex items-center space-x-2">
-            <i data-lucide="check-circle-2" class="w-5 h-5 text-[#00C4A3]"></i>
-            <span>Disponible en tu celular</span>
-          </div>
-        </div>
+        <p class="text-sm text-slate-500 text-center md:text-left">Sin tarjeta de crédito · 15 idiomas · Cancela cuando quieras</p>
       </div>
 
       <!-- Right column — Phone mockup -->
@@ -139,78 +133,22 @@
               <div style="color:rgba(255,255,255,.55);font-size:9px;">COP · 3 cuentas</div>
             </div>
             <!-- Stats -->
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 10px 0;">
-              <div style="background:#1b2336;border-radius:12px;padding:10px;">
-                <div style="color:#4ade80;font-size:8px;font-weight:700;letter-spacing:.1em;margin-bottom:3px;">↑ INGRESOS</div>
-                <div style="color:#fff;font-size:13px;font-weight:700;">$3.200.000</div>
-                <div style="color:rgba(255,255,255,.3);font-size:8px;">Este mes</div>
-              </div>
-              <div style="background:#1b2336;border-radius:12px;padding:10px;">
-                <div style="color:#f87171;font-size:8px;font-weight:700;letter-spacing:.1em;margin-bottom:3px;">↓ GASTOS</div>
-                <div style="color:#fff;font-size:13px;font-weight:700;">$1.847.500</div>
-                <div style="color:rgba(255,255,255,.3);font-size:8px;">Este mes</div>
-              </div>
-            </div>
-            <!-- Transactions -->
-            <div style="padding:10px 10px 8px;">
-              <div style="color:rgba(255,255,255,.3);font-size:8px;font-weight:700;letter-spacing:.14em;margin-bottom:7px;">MOVIMIENTOS</div>
-              <div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05);">
-                <div style="display:flex;align-items:center;gap:8px;">
-                  <div style="width:30px;height:30px;background:#1b2336;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;">🛒</div>
-                  <div>
-                    <div style="color:#fff;font-size:10px;font-weight:600;">Supermercado</div>
-                    <div style="color:rgba(255,255,255,.3);font-size:8px;">Alimentación</div>
-                  </div>
-                </div>
-                <span style="color:#f87171;font-size:10px;font-weight:700;">-$85.000</span>
-              </div>
-              <div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05);">
-                <div style="display:flex;align-items:center;gap:8px;">
-                  <div style="width:30px;height:30px;background:#1b2336;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;">💼</div>
-                  <div>
-                    <div style="color:#fff;font-size:10px;font-weight:600;">Salario</div>
-                    <div style="color:rgba(255,255,255,.3);font-size:8px;">Ingreso</div>
-                  </div>
-                </div>
-                <span style="color:#4ade80;font-size:10px;font-weight:700;">+$3.200.000</span>
-              </div>
-              <div style="display:flex;align-items:center;justify-content:space-between;padding:7px 0;">
-                <div style="display:flex;align-items:center;gap:8px;">
-                  <div style="width:30px;height:30px;background:#1b2336;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;">🚌</div>
-                  <div>
-                    <div style="color:#fff;font-size:10px;font-weight:600;">TransMilenio</div>
-                    <div style="color:rgba(255,255,255,.3);font-size:8px;">Transporte</div>
-                  </div>
-                </div>
-                <span style="color:#f87171;font-size:10px;font-weight:700;">-$5.200</span>
-              </div>
-            </div>
-            <!-- Screen home indicator -->
-            <div style="text-align:center;padding:4px 0 8px;">
-              <div style="display:inline-block;width:72px;height:3px;background:rgba(255,255,255,.12);border-radius:2px;"></div>
-            </div>
-          </div>
-          <!-- Home bar -->
-          <div style="text-align:center;padding:7px 0 4px;">
-            <div style="display:inline-block;width:80px;height:4px;background:rgba(255,255,255,.2);border-radius:2px;"></div>
-          </div>
-        </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-4xl mx-auto">
+      <div class="text-center p-5 rounded-xl bg-gradient-to-br from-[#00C4A3]/5 to-[#0EA5E9]/5 border border-[#00C4A3]/10">
+        <div class="text-3xl font-bold gradient-text mb-1">15+</div>
+        <div class="text-slate-600 text-sm">Idiomas disponibles</div>
       </div>
-    </div>
-
-    <!-- Stats -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-      <div class="text-center p-6 rounded-xl bg-gradient-to-br from-[#00C4A3]/5 to-[#0EA5E9]/5 border border-[#00C4A3]/10">
-        <div class="text-4xl font-bold gradient-text mb-2">2 min</div>
-        <div class="text-slate-600">Para configurar tu primera cuenta</div>
+      <div class="text-center p-5 rounded-xl bg-gradient-to-br from-[#00C4A3]/5 to-[#0EA5E9]/5 border border-[#00C4A3]/10">
+        <div class="text-3xl font-bold gradient-text mb-1">170+</div>
+        <div class="text-slate-600 text-sm">Divisas soportadas</div>
       </div>
-      <div class="text-center p-6 rounded-xl bg-gradient-to-br from-[#00C4A3]/5 to-[#0EA5E9]/5 border border-[#00C4A3]/10">
-        <div class="text-4xl font-bold gradient-text mb-2">100%</div>
-        <div class="text-slate-600">Gratuito para empezar</div>
+      <div class="text-center p-5 rounded-xl bg-gradient-to-br from-[#00C4A3]/5 to-[#0EA5E9]/5 border border-[#00C4A3]/10">
+        <div class="text-3xl font-bold gradient-text mb-1">PWA</div>
+        <div class="text-slate-600 text-sm">Sin instalación</div>
       </div>
-      <div class="text-center p-6 rounded-xl bg-gradient-to-br from-[#00C4A3]/5 to-[#0EA5E9]/5 border border-[#00C4A3]/10">
-        <div class="text-4xl font-bold gradient-text mb-2">COP</div>
-        <div class="text-slate-600">Formato colombiano nativo</div>
+      <div class="text-center p-5 rounded-xl bg-gradient-to-br from-[#00C4A3]/5 to-[#0EA5E9]/5 border border-[#00C4A3]/10">
+        <div class="text-3xl font-bold gradient-text mb-1">⚡</div>
+        <div class="text-slate-600 text-sm">Sync en tiempo real</div>
       </div>
     </div>
   </div>
@@ -227,7 +165,7 @@
       <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-red-500/50 transition">
         <div class="text-red-400 mb-4 text-3xl">❌</div>
         <h3 class="text-xl font-bold mb-3">"No sé cuánto tengo en total entre todas mis cuentas"</h3>
-        <p class="text-slate-400">Tienes plata en Bancolombia, en Nequi y en Daviplata pero no sabes cuánto sumas en total.</p>
+        <p class="text-slate-400">Tienes dinero en varias cuentas pero no sabes cuánto tienes en total ni en qué divisa.</p>
       </div>
       <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-red-500/50 transition">
         <div class="text-red-400 mb-4 text-3xl">❌</div>
@@ -249,7 +187,7 @@
         <div class="bg-gradient-to-br from-[#00C4A3] to-[#00C4A3]/80 p-8 rounded-xl shadow-xl hover:scale-105 transition">
           <div class="text-4xl mb-4">🏦</div>
           <h3 class="text-xl font-bold mb-3">Un solo balance con todas tus cuentas</h3>
-          <p class="text-teal-50">Conecta Bancolombia, Nequi, Daviplata y cualquier cuenta. Ve tu balance real en un solo lugar.</p>
+          <p class="text-teal-50">Conecta todas tus cuentas y divisas. Ve tu balance real consolidado en un solo lugar.</p>
         </div>
         <div class="bg-gradient-to-br from-[#00C4A3] to-[#00C4A3]/80 p-8 rounded-xl shadow-xl hover:scale-105 transition">
           <div class="text-4xl mb-4">⚡</div>
@@ -270,41 +208,42 @@
 <section id="features" class="py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Todo lo que necesitas en una sola app</h2>
-      <p class="text-xl text-slate-600 max-w-3xl mx-auto">FinanzIA reúne todas las herramientas financieras que una persona real necesita.</p>
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Todo lo que necesitas para entender tu dinero</h2>
+      <p class="text-xl text-slate-600 max-w-3xl mx-auto">Desde registrar un café hasta gestionar inversiones en múltiples divisas — FinanzIA lo hace simple.</p>
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       <div class="group bg-gradient-to-br from-slate-50 to-white p-8 rounded-2xl border border-slate-200 hover:border-[#00C4A3] hover:shadow-xl transition">
-        <div class="text-[#00C4A3] mb-4 group-hover:scale-110 transition"><i data-lucide="bar-chart-3" class="w-8 h-8"></i></div>
-        <h3 class="text-xl font-bold text-gray-800 mb-3">Control de cuentas</h3>
-        <p class="text-slate-600">Bancolombia, Nequi, Daviplata y más en un solo lugar. Ve tu balance real en segundos.</p>
+        <div class="text-3xl mb-4">💱</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Múltiples divisas</h3>
+        <p class="text-slate-600">Maneja USD, EUR, COP, PLN y cualquier otra divisa. Tipos de cambio actualizados en tiempo real automáticamente.</p>
       </div>
       <div class="group bg-gradient-to-br from-slate-50 to-white p-8 rounded-2xl border border-slate-200 hover:border-[#00C4A3] hover:shadow-xl transition">
-        <div class="text-[#00C4A3] mb-4 group-hover:scale-110 transition"><i data-lucide="dollar-sign" class="w-8 h-8"></i></div>
-        <h3 class="text-xl font-bold text-gray-800 mb-3">Movimientos</h3>
-        <p class="text-slate-600">Registra ingresos y gastos en segundos desde tu celular. Sin complicaciones.</p>
-      </div>
-      <div class="group bg-gradient-to-br from-slate-50 to-white p-8 rounded-2xl border border-slate-200 hover:border-[#00C4A3] hover:shadow-xl transition">
-        <div class="text-[#00C4A3] mb-4 group-hover:scale-110 transition"><i data-lucide="trending-up" class="w-8 h-8"></i></div>
+        <div class="text-3xl mb-4">📊</div>
         <h3 class="text-xl font-bold text-gray-800 mb-3">Presupuestos y metas</h3>
-        <p class="text-slate-600">Define límites de gasto por categoría y ahorra con propósito hacia tus metas.</p>
+        <p class="text-slate-600">Define cuánto quieres gastar por categoría y establece metas de ahorro con seguimiento automático del progreso.</p>
       </div>
       <div class="group bg-gradient-to-br from-slate-50 to-white p-8 rounded-2xl border border-slate-200 hover:border-[#00C4A3] hover:shadow-xl transition">
-        <div class="text-[#00C4A3] mb-4 group-hover:scale-110 transition"><i data-lucide="zap" class="w-8 h-8"></i></div>
-        <h3 class="text-xl font-bold text-gray-800 mb-3">Simuladores financieros</h3>
-        <p class="text-slate-600">Simula créditos, planes de ahorro y proyecta tu jubilación con datos reales.</p>
+        <div class="text-3xl mb-4">🔔</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Notificaciones inteligentes</h3>
+        <p class="text-slate-600">Alertas de pagos próximos, presupuestos al límite y resúmenes semanales, incluso con la app cerrada.</p>
       </div>
       <div class="group bg-gradient-to-br from-slate-50 to-white p-8 rounded-2xl border border-slate-200 hover:border-[#00C4A3] hover:shadow-xl transition">
-        <div class="text-[#00C4A3] mb-4 group-hover:scale-110 transition"><i data-lucide="shield" class="w-8 h-8"></i></div>
-        <h3 class="text-xl font-bold text-gray-800 mb-3">Test de salud financiera</h3>
-        <p class="text-slate-600">Sabe exactamente cómo estás. Diagnóstico real con recomendaciones concretas.</p>
+        <div class="text-3xl mb-4">📅</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Pagos programados</h3>
+        <p class="text-slate-600">Registra suscripciones y pagos recurrentes. FinanzIA los anticipa para que nunca te tomen por sorpresa.</p>
       </div>
       <div class="group bg-gradient-to-br from-slate-50 to-white p-8 rounded-2xl border border-slate-200 hover:border-[#00C4A3] hover:shadow-xl transition">
-        <div class="text-[#00C4A3] mb-4 group-hover:scale-110 transition"><i data-lucide="brain" class="w-8 h-8"></i></div>
-        <h3 class="text-xl font-bold text-gray-800 mb-3">Emiliano IA</h3>
-        <p class="text-slate-600">Tu asesor financiero personal con inteligencia artificial. Solo en el Plan Pro.</p>
+        <div class="text-3xl mb-4">📈</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Análisis e informes</h3>
+        <p class="text-slate-600">Visualiza tus finanzas por día, semana, mes o año. Entiende en qué gastas más y cómo mejorar mes a mes.</p>
       </div>
+      <div class="group bg-gradient-to-br from-slate-50 to-white p-8 rounded-2xl border border-slate-200 hover:border-[#00C4A3] hover:shadow-xl transition">
+        <div class="text-3xl mb-4">🤖</div>
+        <h3 class="text-xl font-bold text-gray-800 mb-3">Emiliano IA <span class="ml-2 text-xs font-bold bg-yellow-100 text-yellow-700 border border-yellow-300 rounded-full px-2 py-0.5">Próximamente</span></h3>
+        <p class="text-slate-600">Tu asistente financiero con inteligencia artificial. Pregunta, analiza y recibe recomendaciones personalizadas.</p>
+      </div>
+    </div>
     </div>
   </div>
 </section>
@@ -335,114 +274,93 @@
   </div>
 </section>
 
-<!-- ═══ PRICING ════════════════════════════════════════════════════ -->
+<!-- ═══ PRICING ══════════════════════════════════ -->
 <section id="pricing" class="py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Elige tu plan</h2>
-      <p class="text-xl text-slate-600">Empieza gratis. Actualiza cuando quieras. Sin permanencia.</p>
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Simple y transparente. Sin sorpresas.</h2>
+      <p class="text-xl text-slate-600 max-w-2xl mx-auto">Empieza gratis. Sube cuando lo necesites. Sin contratos, cancela cuando quieras.</p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-4 items-start">
 
       <!-- Plan Gratis -->
-      <div class="relative bg-white rounded-2xl border-2 border-slate-200 p-8 hover:border-[#00C4A3] hover:shadow-2xl transition">
-        <div class="text-center mb-8">
-          <h3 class="text-2xl font-bold text-gray-800 mb-2">Gratis</h3>
-          <p class="text-slate-600 mb-6">Para comenzar a controlar tus finanzas</p>
-          <div class="mb-1">
-            <span class="text-5xl font-bold text-gray-800">$0</span>
-          </div>
-          <p class="text-slate-500 text-sm">COP · Para siempre</p>
-        </div>
-        <a href="https://finanzia.xenda.co" class="btn-plan-outline w-full py-3 rounded-lg font-semibold transition mb-8 flex items-center justify-center bg-slate-100 text-gray-800 border border-slate-200">
+      <div class="relative bg-white rounded-2xl border border-slate-200 p-7 flex flex-col hover:shadow-lg transition">
+        <div class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-5">Gratis</div>
+        <div class="mb-1"><span class="text-5xl font-bold text-gray-900">$0</span></div>
+        <p class="text-sm text-slate-500 mb-5">Para siempre</p>
+        <hr class="border-slate-200 mb-5">
+        <ul class="space-y-3 flex-1 mb-6">
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">1 divisa</span></li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">Hasta 50 transacciones/mes</span></li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">2 cuentas</span></li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">Categorías predefinidas</span></li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">1 presupuesto · 1 meta</span></li>
+          <li class="flex items-start gap-2.5 opacity-40"><i data-lucide="minus" class="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5"></i><span class="text-slate-500 text-sm line-through">Pagos programados</span></li>
+          <li class="flex items-start gap-2.5 opacity-40"><i data-lucide="minus" class="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5"></i><span class="text-slate-500 text-sm line-through">Inversiones</span></li>
+          <li class="flex items-start gap-2.5 opacity-40"><i data-lucide="minus" class="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5"></i><span class="text-slate-500 text-sm line-through">Exportar PDF/CSV</span></li>
+        </ul>
+        <a href="https://finanzia.xenda.co" target="_blank"
+           class="btn-plan-outline block w-full py-3 rounded-lg font-semibold text-center text-gray-900 border-2 border-slate-200 bg-white hover:shadow transition">
           Empezar gratis
         </a>
-        <ul class="space-y-4">
-          <li class="flex items-start space-x-3">
-            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
-            <span class="text-slate-700">Hasta 2 cuentas</span>
-          </li>
-          <li class="flex items-start space-x-3">
-            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
-            <span class="text-slate-700">Registro de movimientos</span>
-          </li>
-          <li class="flex items-start space-x-3">
-            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
-            <span class="text-slate-700">Balance total</span>
-          </li>
-          <li class="flex items-start space-x-3">
-            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
-            <span class="text-slate-700">Categorías básicas</span>
-          </li>
-          <li class="flex items-start space-x-3 opacity-50">
-            <i data-lucide="x" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i>
-            <span class="text-slate-500">Presupuestos y metas</span>
-          </li>
-          <li class="flex items-start space-x-3 opacity-50">
-            <i data-lucide="x" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i>
-            <span class="text-slate-500">Simuladores</span>
-          </li>
-          <li class="flex items-start space-x-3 opacity-50">
-            <i data-lucide="x" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i>
-            <span class="text-slate-500">Emiliano IA</span>
-          </li>
-          <li class="flex items-start space-x-3 opacity-50">
-            <i data-lucide="x" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i>
-            <span class="text-slate-500">Reportes avanzados</span>
-          </li>
-        </ul>
       </div>
 
-      <!-- Plan Pro -->
-      <div class="relative bg-white rounded-2xl border-2 border-[#00C4A3] p-8 shadow-2xl scale-105">
-        <div class="absolute -top-4 left-1/2 -translate-x-1/2">
-          <span class="bg-gradient-to-r from-[#00C4A3] to-[#0EA5E9] text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">Más Popular</span>
+      <!-- Plan Pro (DESTACADO) -->
+      <div class="relative bg-white rounded-2xl border-2 border-[#00C4A3] p-7 flex flex-col"
+           style="box-shadow:0 8px 32px rgba(0,196,163,0.20);">
+        <div class="absolute left-1/2 -translate-x-1/2" style="top:-13px;">
+          <span class="bg-gradient-to-r from-[#00C4A3] to-[#0EA5E9] text-white text-[11px] font-bold px-3 py-1 rounded-full whitespace-nowrap">⭐ Más popular</span>
         </div>
-        <div class="text-center mb-8">
-          <h3 class="text-2xl font-bold text-gray-800 mb-2">Pro</h3>
-          <p class="text-slate-600 mb-6">Para tomar el control total de tus finanzas</p>
-          <div class="mb-1">
-            <span class="text-5xl font-bold text-gray-800">$12.900</span>
-          </div>
-          <p class="text-slate-500 text-sm">COP / mes</p>
-        </div>
-        <a href="https://finanzia.xenda.co" class="w-full py-3 rounded-lg font-semibold transition mb-8 flex items-center justify-center bg-gradient-to-r from-[#00C4A3] to-[#0EA5E9] text-white hover:shadow-xl hover:scale-105">
-          Quiero el Pro
-        </a>
-        <ul class="space-y-4">
-          <li class="flex items-start space-x-3">
-            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
-            <span class="text-slate-700">Todo lo del plan Gratis</span>
-          </li>
-          <li class="flex items-start space-x-3">
-            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
-            <span class="text-slate-700">Cuentas ilimitadas</span>
-          </li>
-          <li class="flex items-start space-x-3">
-            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
-            <span class="text-slate-700">Categorías personalizadas</span>
-          </li>
-          <li class="flex items-start space-x-3">
-            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
-            <span class="text-slate-700">Presupuestos y metas</span>
-          </li>
-          <li class="flex items-start space-x-3">
-            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
-            <span class="text-slate-700">Simuladores financieros</span>
-          </li>
-          <li class="flex items-start space-x-3">
-            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
-            <span class="text-slate-700">Emiliano IA</span>
-          </li>
-          <li class="flex items-start space-x-3">
-            <i data-lucide="check" class="w-5 h-5 text-[#00C4A3] flex-shrink-0 mt-0.5"></i>
-            <span class="text-slate-700">Reportes avanzados</span>
-          </li>
+        <div class="text-xs font-bold uppercase tracking-widest text-[#00C4A3] mb-5">Pro</div>
+        <div class="mb-1"><span class="text-5xl font-bold plan-price-grad">$4.99</span></div>
+        <p class="text-sm text-slate-500 mb-5">USD / mes</p>
+        <hr class="mb-5" style="border-color:rgba(0,196,163,0.2);">
+        <ul class="space-y-3 flex-1 mb-6">
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">Hasta 3 divisas</span></li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">Transacciones ilimitadas</span></li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">Cuentas ilimitadas</span></li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">Categorías personalizables</span></li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">Presupuestos y metas ilimitadas</span></li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">Pagos programados</span></li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">Inversiones y suscripciones</span></li>
+          <li class="flex items-start gap-2.5 opacity-40"><i data-lucide="minus" class="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5"></i><span class="text-slate-500 text-sm line-through">Exportar PDF/CSV</span></li>
         </ul>
+        <a href="https://finanzia.xenda.co" target="_blank"
+           class="block w-full py-3 rounded-lg font-semibold text-center text-white bg-gradient-to-r from-[#00C4A3] to-[#0EA5E9] hover:shadow-xl hover:scale-105 transition">
+          Empezar con Pro
+        </a>
+      </div>
+
+      <!-- Plan Premium -->
+      <div class="relative bg-white rounded-2xl border border-slate-200 p-7 flex flex-col hover:shadow-lg transition">
+        <div class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-5">Premium</div>
+        <div class="mb-1"><span class="text-5xl font-bold text-gray-900">$9.99</span></div>
+        <p class="text-sm text-slate-500 mb-5">USD / mes</p>
+        <hr class="border-slate-200 mb-5">
+        <ul class="space-y-3 flex-1 mb-6">
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">Divisas ilimitadas</span></li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">Transacciones ilimitadas</span></li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">Cuentas ilimitadas</span></li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">Categorías personalizables</span></li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">Presupuestos y metas ilimitadas</span></li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">Pagos programados</span></li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">Inversiones y suscripciones</span></li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">Exportar PDF/CSV</span></li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">Emiliano IA <span class="ml-1 text-[10px] font-bold text-[#00C4A3] border border-[#00C4A3]/40 rounded px-1 py-0.5">Próx.</span></span></li>
+          <li class="flex items-start gap-2.5"><i data-lucide="check" class="w-4 h-4 text-[#00C4A3] flex-shrink-0 mt-0.5"></i><span class="text-slate-700 text-sm">Soporte prioritario</span></li>
+        </ul>
+        <a href="https://finanzia.xenda.co" target="_blank"
+           class="btn-plan-outline block w-full py-3 rounded-lg font-semibold text-center text-gray-900 border-2 border-slate-200 bg-white hover:shadow transition">
+          Empezar con Premium
+        </a>
       </div>
 
     </div>
+
+    <p class="text-center text-sm text-slate-500 mt-8">
+      Todos los planes incluyen PWA, sync en tiempo real y tema claro/oscuro. Sin tarjeta de crédito para el plan Gratis.
+    </p>
   </div>
 </section>
 
@@ -597,12 +515,12 @@
       </div>
       <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-slate-400 text-sm">
         <button onclick="openModal()" class="hover:text-white transition">Contacto</button>
-        <a href="/privacidad.html" class="hover:text-white transition">Privacidad</a>
-        <a href="/terminos.html" class="hover:text-white transition">Términos</a>
+        <a href="/privacidad" class="hover:text-white transition">Privacidad</a>
+        <a href="/terminos" class="hover:text-white transition">Términos</a>
       </div>
     </div>
     <div class="border-t border-slate-700 pt-6 text-center text-slate-400 text-sm space-y-2">
-      <p>© 2026 Xenda. Todos los derechos reservados.</p>
+      <p>© 2026 Xenda · Todos los derechos reservados</p>
       <p>E-mail: <a href="mailto:soporte@xenda.co" class="text-[#00C4A3] hover:text-white transition font-medium">soporte@xenda.co</a></p>
     </div>
   </div>
